@@ -1,0 +1,401 @@
+	OVERVIEW
+	* Project:
+		- What's project?
+			+ A series of works.
+			
+			+ Well-defined goal.
+			
+			+ Limited time.
+			
+		- Types of projects:
+			+ Based on project goal.
+			
+			+ Production project -> product.
+			
+			+ Investment project -> benefit.
+			
+			+ Research project -> knowledge.
+			
+	* Software project:
+		- Software is intangible (non-physical).
+		
+		- Software is flexible.
+		
+		- Software processes are flexible.
+		
+		- Software projet depends on human factors.
+		
+	* Software project management:
+		- Guarantee successful project: Scope, time, budget.
+		
+		- Responsibility:
+			+ Program manager.
+			
+			+ Project manager.
+			
+			+ Team lead.
+			
+			+ Test manager.
+			
+	* Project manager:
+		- Project manager vs. Engineering manager.
+		
+		- Project manager:
+			+ Leads the project team to achieve project objectives.
+			
+			+ Is one single important person for the project.
+			
+			+ Plays numerous roles of project management.
+			
+	* Software management activities: Initiation, planning, executing, tracking.
+		- Initiation:
+			+ Preliminary study and survey.
+			
+			+ Goals:
+				# Feasibility study.
+				
+				# Scope identification.
+				
+				# Time & budget draft.
+				
+			+ Deliverables:
+				# Feasibility report.
+				
+				# Project proposal.
+				
+		- Planning:
+			+ Scope definition.
+			
+			+ Estimation.
+			
+			+ Scheduling.
+			
+		- Executing:
+			+ Follow the master plan.
+			
+			+ Weekly plan:
+				# Detailed tasks.
+				
+				# Assigned members.
+				
+				# Expected results.
+				
+		- Tracking:
+			+ Guarantee plans are followed (3-W)
+				# WHERE: are we?
+				
+				# WHAT: difficults?
+				
+				# WHY: have problems?
+				
+			+ Change management.
+	
+	---------------------------------------------------------------------------------------------------------------
+	
+	PROJECT PLANNING
+	* Defining goals, what, who, when (and how) to do.
+	
+	* Planning is a continuous activity:
+		- Started early in project, lasted until the end of project.
+		
+		- Plans are revised to reflect reality.
+		
+	* Activities and artifacts created dependent on processes followed.
+		-> Agile projects require less planning than tranditional projects.
+		
+	* Many different plans:
+		- Software development plan (SDP):
+			+ Budget and schedule.
+			
+			+ Staffing plan.
+			
+			+ Training plan.
+			
+			+ Risk management plan.
+			
+			+ Schedule.
+			
+			+ Monitoring and controlling.
+			
+		- Testing plan.
+		
+		- Deployment plan.
+		
+		- Configuration management plan.
+		
+		- Quality management plan.
+		
+		- Software acceptance plan.
+		
+	* Main activities to form SDP:
+		- Estimate overall project effort, cost, and staff.
+		
+		- Plan phases, iterations.
+		
+		- Define and customize processes to use.
+		
+		- Assign roles and responsibilities to staff.
+		
+		- Plan training needs.
+		
+		- Identify and assess risks.
+		
+	* Scope definition:
+		- Establishing the project's objectives and deliverables.
+		
+		- Work breakdown structure (WBS): Breaking down the project into
+		smaller, manageable tasks or components.
+		
+	* Estimation:
+		- Project estimation:
+			+ Organizations need to make software effort and cost estimates.
+			
+			+ Experience-based techniques:
+				# The estimate is based on the manager's experience of past projects
+				and application domain.
+				
+				# The manager makes an informed judgement of what the effort requirements
+				are likely to be.
+				
+			+ Algorithmic cost modeling: A formulaic approach is used to compute the project
+			effort based on estimates of product attributes, such as size, and process characteristics,
+			such as experience of staff involved.
+				
+	* Scheduling:
+		- Project scheduling:
+			+ Goal: Assigning right people to right tasks at right time.
+			
+			+ Activities:
+				# Organize tasks concurrently to make optimal use of workforce.
+				
+				# Minimize task dependencies, slack time, and waiting time.
+				
+				# Balance workload.
+				
+			+ Scheduling is a challenging activity.
+				-> Requiring much intuition and experience of project managers.
+				
+		- Challenges in project scheduling:
+			+ Estimating each task is difficult:
+				# Productivity is not proportional to the number of people working on a task.
+				
+				# Dependencies.
+				
+				# Resource constraints.
+				
+			+ Adding people to a late project makes it later.
+				# Communication overheads.
+				
+				# Extra training.
+				
+			+ Unexpected things always happen: Allow contingency in planning.
+			
+		- Task organization:
+			+ Organize tasks to produce tangible outputs.
+			
+			+ Milestones are the end-point of a period.
+			
+			+ Deliverables are results delivered to customers or users.
+			
+			+ Each milestone is often marked by a set of deliverables.
+	
+	---------------------------------------------------------------------------------------------------------------
+	
+	RISK MANAGEMENT
+	* Risk management:
+		- Goal: Minimize effects of risks on project.
+		
+		- A risk is a probability that some adverse circumstance will occur.
+		
+		- Effects:
+			+ Schedule or resources.
+			
+			+ Quality or performance of software.
+			
+			+ Cost.
+			
+			+ ...
+			
+	* Software risks:
+	
+			+-------------------------+---------------------+----------------------------------------------------------+
+			| Risk                    | Affects             | Description                                              |
+			+-------------------------+---------------------+----------------------------------------------------------+
+			| Staff turnover          | Project             | Experienced staff will leave the project before it is    |
+			|                         |                     | finished                                                 |
+			+-------------------------+---------------------+----------------------------------------------------------+
+			| Management change       | Project             | There will be a change of organizational management with |
+			|                         |                     | different priorities                                     |
+			+-------------------------+---------------------+----------------------------------------------------------+
+			| Hardware unavailability | Project             | Hardware that is essential for the project will not be   |
+			|                         |                     | delivered on schedule                                    |
+			+-------------------------+---------------------+----------------------------------------------------------+
+			| Requirements change     | Project and product | There will be a larger number of changes to the          |
+			|                         |                     | requirements than anticipated                            |
+			+-------------------------+---------------------+----------------------------------------------------------+
+			| Specification delays    | Project and product | Specifications of essential interfaces are not available |
+			|                         |                     | on schedule                                              |
+			+-------------------------+---------------------+----------------------------------------------------------+
+			| Size underestimate      | Project and product | The size of the system has been underestimated           |
+			+-------------------------+---------------------+----------------------------------------------------------+
+			| CASE tool under-        | Product             | CASE tools which support the project do not perform as   |
+			| performance             |                     | anticipated                                              |
+			+-------------------------+---------------------+----------------------------------------------------------+
+			| Technology change       | Business            | The underlying technology on which the system is built   |
+			|                         |                     | is superseded by new technology                          |
+			+-------------------------+---------------------+----------------------------------------------------------+
+			| Product competition     | Business            | A competitive product is marketed before the system is   |
+			|                         |                     | completed                                                |
+			+-------------------------+---------------------+----------------------------------------------------------+
+	
+	* Risk management activities:
+		- Risk identification.
+		
+		- Risk analysis.
+		
+		- Risk planning.
+		
+		- Risk monitoring.
+	
+	* Risk identification:
+		- Technology risks.
+		
+		- People risks.
+		
+		- Organizational risks.
+		
+		- Requirements risks.
+		
+		- Estimation risks.
+		
+	* Risks and risk types:
+	
+		+-------------------+------------------------------------------------------------------------------------------+
+		| Risk type         | Possible risks                                                                           |
+		+-------------------+------------------------------------------------------------------------------------------+
+		| Technology        | • The database used in the system cannot process as many transactions per second as      |
+		|                   |   expected                                                                               |
+		|                   | • Software components that should be reused contain defects that limit their             |
+		|                   |   functionality                                                                          |
+		+-------------------+------------------------------------------------------------------------------------------+
+		| People            | • It is impossible to recruit staff with the skills required                             |
+		|                   | • Key staff are ill and unavailable at critical times                                    |
+		|                   | • Required training for staff is not available                                           |
+		+-------------------+------------------------------------------------------------------------------------------+
+		| Organizational    | • The organization is restructured so that different management are responsible for the  |
+		|                   |   project                                                                                |
+		|                   | • Organizational financial problems force reductions in the project budget               |
+		+-------------------+------------------------------------------------------------------------------------------+
+		| Requirements      | • Changes to requirements that require major design rework are proposed                  |
+		|                   | • Customers fail to understand the impact of requirements changes                        |
+		+-------------------+------------------------------------------------------------------------------------------+
+		| Estimation        | • The time required to develop the software is underestimated                            |
+		|                   | • The size of the software is underestimated                                             |
+		+-------------------+------------------------------------------------------------------------------------------+
+		
+	* Risk analysis:
+		- Assess probability and seriousness of each risk: Probability & Loss.
+		
+		- Risk exposure (RE) = Probability x Loss.
+		
+		- Probability can be:
+			+ Categorical: Very low, low, moderate, high or very high.
+			
+			+ Numerical: From 0% to 100%.
+
+		- Loss can be:
+			+ Categorical: Catastrophic, serious, tolerable or insignificant.
+			
+			+ Numerical: Any number representing cost.
+			
+		- Categories to numerical values:
+		
+				+----------------+-------------------+       +-------------------+-------------------+
+				| Probability    | Numerical value   |       | Loss              | Numerical value   |
+				+----------------+-------------------+       +-------------------+-------------------+
+				| Unlikely       | 10                |       | Negligent         | 10                |
+				| Seldom         | 25                |       | Insignificant     | 25                |
+				| Occasional     | 50                |       | Moderate          | 50                |
+				| Likely         | 75                |       | Serious           | 75                |
+				| Frequently     | 90                |       | Catastrophic      | 90                |
+				+----------------+-------------------+       +-------------------+-------------------+
+
+		- Risks are prioritized using RE.
+			-> Higher prioritized risk has higher RE.
+			
+	* Risk planning:
+		- Provide mitigation strategies to manage each risk.
+		
+		- Avoidance strategies.
+		
+		- Minimization strategies.
+		
+		- Contingency plans (If risks arise, contingency plans are followed).
+		
+		- Risk transfer.
+		
+		- Buying information.
+		
+	* Risk management strategies:
+	
+		+-------------------------------+-----------------------------------------------------------------------+
+		| Risk                          | Strategy                                                              |
+		+-------------------------------+-----------------------------------------------------------------------+
+		| Organizational financial      | Prepare a briefing document for senior management showing how the     |
+		| problems                      | project is making a very important contribution to the goals of the   |
+		|                               | business                                                              |
+		+-------------------------------+-----------------------------------------------------------------------+
+		| Recruitment problems          | Alert customer of potential difficulties and the possibility of       |
+		|                               | delays, investigate buying-in components                              |
+		+-------------------------------+-----------------------------------------------------------------------+
+		| Staff illness                 | Reorganize team so that there is more overlap of work and people      |
+		|                               | therefore understand each other's jobs                                |
+		+-------------------------------+-----------------------------------------------------------------------+
+		| Defective components          | Replace potentially defective components with bought-in components of |
+		|                               | known reliability                                                     |
+		+-------------------------------+-----------------------------------------------------------------------+
+		| Requirements changes          | Derive traceability information to assess requirements change impact, |
+		|                               | maximize information hiding in the design                             |
+		+-------------------------------+-----------------------------------------------------------------------+
+		| Organizational restructuring  | Prepare a briefing document for senior management showing how the     |
+		|                               | project is making a very important contribution to the goals of the   |
+		|                               | business                                                              |
+		+-------------------------------+-----------------------------------------------------------------------+
+		| Database performance          | Investigate the possibility of buying a higher-performance database   |
+		+-------------------------------+-----------------------------------------------------------------------+
+		|Underestimated development time| Investigate buying in components, investigate use of a program        |
+		|                               | generator                                                             |
+		+-------------------------------+-----------------------------------------------------------------------+
+		
+	* Risk monitoring:
+		- Risk indicators:
+		
+			+----------------+-------------------------------------------------------------------------+
+			| Risk type      | Potential indicators                                                    |
+			+----------------+-------------------------------------------------------------------------+
+			| Technology     | Late delivery of hardware or support software, many reported technology |
+			|                | problems                                                                |
+			+----------------+-------------------------------------------------------------------------+
+			| People         | Poor staff morale, poor relationships amongst team member, job          |
+			|                | availability                                                            |
+			+----------------+-------------------------------------------------------------------------+
+			| Organizational | Organizational gossip, lack of action by senior management              |
+			+----------------+-------------------------------------------------------------------------+
+			| Requirements   | Many requirements change requests, customer complaints                  |
+			+----------------+-------------------------------------------------------------------------+
+			| Estimation     | Failure to meet agreed schedule, failure to clear reported defects      |
+			+----------------+-------------------------------------------------------------------------+
+			
+		- Assess each identified risks regularly:
+			+ Some risks may become less, some more probable.
+			
+			+ Maintain a list of top-10 risks.
+			
+			+ Review and revise risks regularly.
+			
+		- High prioritized risks should be:
+			+ Reviewed and discussed at management progress meetings.
+			
+			+ Reported weekly.
+			
+		- Taking appropriate actions when problems occur.

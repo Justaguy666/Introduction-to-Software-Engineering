@@ -1,0 +1,398 @@
+	OVERVIEW OF TEST AUTOMATION
+	* Test Automation:
+		- Test automation refers to the use of software tools to executes tests.
+		
+		- Automated testing tools can enter data, run tests, compare results, and report test results.
+		
+		- Automated testing vs. Manual testing:
+			+ Manual testing: Tests are performed by humans.
+			
+			+ Automated testing: Tests are performed by computers.
+			
+	* Why Test Automation?
+		- Manual testing is time and cost consuming.
+		
+		- Automation testing shorten tests and project duration.
+		
+		- Difficult to do manual testing in some situations:
+			+ Multilingual sites.
+			
+			+ Performance test.
+			
+			+  Security test.
+			
+		- Automation helps increase test coverage.
+		
+		- Manual testing can become tedious and error prone.
+		
+	* Benefits of Test Automation:
+		- Save time and cost.
+		
+		- Faster than the manual testing.
+		
+		- Early time to market, better speed in executing tests.
+		
+		- Reusable testing.
+		
+		- Wider test coverage of application features.
+		
+		- Reliable in results.
+		
+		- Improves accuracy.
+		
+		- Test more frequently and thoroughly.
+		
+	* Test Automation is Essential for DevOps:
+		- DevOps - a practice for making steps from development to operation easy and quick.
+		
+		- DevOps reduces software lifecycle time significantly.
+		
+		- It becomes a trend today.
+		
+	* When Test Automation Works Best?
+		- High risk, business critical test cases.
+		
+		- Test cases that the executed repeatedly, such as regression test.
+		
+		- Test cases that are very tedious or difficult to perform manually.
+		
+		- Time consuming test cases.
+		
+		- Performance tests.
+		
+		- Security tests.
+		
+	* When Test Automation not Suitable?
+		- Newly designed test cases, test cases should be manually tested at least once.
+		
+		- Test cases for frequently changed requirements.
+		
+		- Ad-hoc test cases.
+		
+		- UI/UX testing dependent on human judgement and experience.
+	
+	* Levels of Test Automation::
+		- Unit testing: Methods, functions, classes.
+		
+		- Integration testing: Integrated multiple parts.
+		
+		- System testing: Focusing on UI, user's features.
+		
+	---------------------------------------------------------------------------------------------------------------
+	
+	TYPICAL TEST AUTOMATION PROCESS
+	* Typical Test Animation Process:
+				+-------------------------------+
+				|  	Select test		          	|
+				|  	automation tools         	|
+				+-------------------------------+
+							|
+							v					
+				+-------------------------------+
+				|  Define scope of test        	|
+				|  automation	              	|
+				+-------------------------------+
+							|		
+							v					
+				+-------------------------------+
+				|  Plan tests				   	|
+				+-------------------------------+
+							|		
+							v
+				+-------------------------------+
+                |  	Design and develop        	|
+                |  	test scripts	         	|
+                +-------------------------------+
+                			|
+                			v					
+                +-------------------------------+
+                |  Execute test scripts        	|
+                |         						|
+                +-------------------------------+
+                			|		
+                			v					
+                +-------------------------------+
+                |  	Report and track test      	|
+                |  	results    					|
+                +-------------------------------+
+                			|
+                			v					
+                +-------------------------------+
+                |  Maintain test scripts       	|
+                |         						|
+                +-------------------------------+
+				
+	* Select Automation Tools:
+		- Selecting tools suitable for applications under test (AUT) is very challenging.
+		
+		- Types of tool:
+			+ Commercial: Some are powerful but expensive.
+			
+			+ Open source: Free but limited functionality.
+			
+		- Criteria to evaluate:
+			+ Budget.
+			
+			+ Easy of use.
+			
+			+ Scripting languages.
+			
+			+ Platform (Windows, Unix, Mac OS, etc).
+			
+			+ Training.
+			
+			+ Team experience.
+			
+	* Define Scope of Test Automation:
+		- Which areas in AUT to be automated.
+		
+		- Which areas to be tested manually.
+		
+		- Areas to be considered:
+			+ Business important features.
+			
+			+ Scenarios which have large amount of data.
+			
+			+ Common functionalities across applications.
+			
+			+ Reused business components.
+			
+			+ Complexity of test cases.
+			
+			+ Test cases for cross browser testing.
+			
+	* Plan Tests: Define test plans and strategies for testing.
+		- Tools to be used.
+		
+		- Test approaches:
+			+ Functional, non-functional, usability, performance, security testing, ...
+		
+			+ Automation testing approaches.
+			
+			+ Unit testing, system testing, integration testing, acceptance testing.
+			
+		- Schedule and timeframe.
+		
+		- Staffing.
+		
+		- Strategies for testing: Manual testing vs. automation testing, areas to test, test environments, etc.
+		
+	* Design and Develop Test Scripts:
+		- Design test cases.
+		
+		- Design test data.
+		
+		- Design and develop test framework and test scripts.
+		
+		- Evaluate test scripts.
+		
+		- Similar to programming.
+		
+		- Test framework: A set of rules for automation.
+		
+		- Test framework consists of software systems, function libraries, reusable modules, data source, etc.
+		
+	* Execute Tests, Report and Track Test Results:
+		- Run test scripts on AUT.
+		
+		- Test execution is usually controlled by the automation tool.
+		
+		- Test results are compared with expected results.
+		
+		- Test results are reported.
+		
+		- Defects are captured and entered to defect management systems.
+		
+	* Maintain Test Scripts:
+		- Test scripts have to be maintained often as software changes.
+			+ New functions are added, updated.
+			
+			+ Requirements are changed.
+			
+		- As developers change source code, test scripts may not work anymore.
+			+ Parameters are changed.
+			
+			+ GUI objects are changed.
+			
+			+ Outputs are changed.
+			
+		- Maintaining test scripts can be very time consuming.
+		
+	---------------------------------------------------------------------------------------------------------------
+	
+	TESTING APPROACHES
+	* Scripting Approaches:
+		- Record and playback.
+		
+		- Linear scripting.
+		
+		- Modular scripting.
+		
+		- Data-driven testing.
+		
+		- Keyword-driven testing.
+		
+	* Record and Playback:
+		- Tools record users’ actions performed on AUT.
+		
+		- Often, scripts are generated after recording.
+		
+		- Tools playback what is recorded.
+		
+		- Popular feature in many automation tools.
+		
+		- Advantages:
+			+ Easy to use.
+			
+			+ No programming skills needed.
+			
+			+ Good for learning.
+			
+		- Problems:
+			+ Scripts can only be created when AUT is ready.
+			
+			+ Does not test anything. Checkpoints are needed to test.
+			
+			+ Only suitable with UI testing.
+			
+			+ Small changes in UI can cause tests to stop.
+			
+			+ Hard to manage and maintain, lots of test scripts are created.
+			
+		- Not a good approach for advanced testing.
+		
+	* Linear Scripting:
+		- Scripts are created to test AUT.
+		
+		- Use some programming languages.
+		
+		- Scripts are also created with Record and Playback.
+		
+		- A test project can have many test suites, a test suite has one or more test cases.
+		
+		- Good for simple test cases.
+		
+		- Difficult for large automation.
+		
+	* Modular Scripting:
+		- Place test scripts into functions or modules.
+		
+		- Use drivers to call these functions or modules to execute scripts on AUT.
+		
+	* Data-Driven Testing:
+		- Data is separated from test scripts.
+		
+		- Test scripts read data automatically from files.
+		
+		- Can test multiple data items, different inputs.
+		
+		- Test driver scripts can use multiple data items:
+			+ E.g., testing different username and password combinations.
+			
+			+ Flexible in changing inputs.
+			
+		- Programming skills not needed when updating data.
+		
+		- Good for separating roles:
+			+ Developers responsible for scripting.
+			
+			+ Testers responsible for test data.
+			
+		- Disadvantages:
+			+ Initial effort is required to create framework (parser, libraries, etc.), just like building a new tool.
+			
+			+ New tests need new driver scripts.
+			
+			+ Require programming skills to create new driver scripts.
+			
+		- Good solution for large scale automation.
+		
+	* Keyword-Driven Testing:
+		- Separate test scripts from:
+			+ Test data.
+			
+			+ Directives (keywords) on how to use data.
+			
+		- Keywords and data drive test execution.
+		
+		- Advantages:
+			+ All tests can be handled by one framework.
+			
+			+ Tests can be created from keywords.
+			
+			+ Non-programmers can create tests.
+			
+			+ Separate test data and scripts.
+			
+		- Disadvantages:
+			+ Effort required to build framework upfront.
+			
+			+ Programming skills needed to build framework.
+			
+		- Good solution supported by many commercial tools.
+		
+	---------------------------------------------------------------------------------------------------------------
+	
+	AUTOMATION TOOLS
+	* Test Automation Tools:
+		- Hundreds of test automation tools available in market.
+		
+		- Commercial tools:
+			+ Usually powerful.
+			
+			+ Well supported.
+			
+			+ Rich feature set.
+			
+			+ Some are expensive, unluckily.
+			
+		- Open source:
+			+ Free.
+			
+			+ Many are good to use, others not that good.
+
+			+ Support uncertain.
+			
+		- Popular commercial tools:
+			+ HP QTP/UFT.
+			
+			+ TestComplete.
+			
+			+ Ranorex.
+			
+			+ Rational Robot.
+			
+			+ Rational Functional Tester.
+			
+			+ eggPlant.
+		
+		- Popular open source and/or free tools:
+			+ Selenium.
+			
+			+ Katalon Studio.
+			
+			+ Cucumber.
+			
+			+ Maveryx.
+		
+	* Want to Work in Test Automation?
+		- Programming skills are a plus, scripting languages: Python, Ruby, Java, C#, etc.
+		
+		- Regular expressions.
+		
+		- SQL.
+		
+		- Learning to use test automation tools.
+			+ Selenium.
+			
+			+ Katalon Studio.
+			
+	* Conclusions:
+		- Test automation is now a trend in software development.
+			+ Customers require to apply test automation.
+			
+			+ Demand is high.
+			
+		- Test automation is essential for DevOps.
+		
+		-  It does not replace manual testing.

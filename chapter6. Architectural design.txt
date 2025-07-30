@@ -1,0 +1,424 @@
+	OVERVIEW
+	* Software Development Process:
+				+------------------------+
+				|  Requirements          |
+				|  definition            |
+				+------------------------+
+							|
+							v			
+				+------------------------+
+				|  Analysis and Design   |
+				+------------------------+
+							|
+							v			
+				+-------------------------------+
+				|  Implementation and          	|
+				|  Unit Testing                	|
+				+-------------------------------+
+							|
+							v					
+				+-------------------------------+
+				|  Integration and             	|
+				|  System Testing              	|
+				+-------------------------------+
+							|		
+							v					
+				+-------------------------------+
+				|  Operation and Maintenance   	|
+				+-------------------------------+
+				
+	* Software Design:
+		- Process of conceptualizing how a software system will work before it is implemented or modified.
+		
+		- Different levels:
+			+ Architectural design: Overall structure of the system.
+			
+			+ High-level design: Sub-systems and modules.
+			
+			+ Detailed design: Data structure and algorithms.
+			
+	* Architectural Design:
+		
+				+------------------------+
+				|  Requirements          |----------------->+------------------------+
+				|  Engineering           |                  |  Architectural         |
+		        +------------------------+	                |  design	             |
+							|				                +------------------------+
+							|				  							|
+							v											|
+				+------------------------+								v
+                |  Software              |					+------------------------+
+				|  Requirements          |                  |  Software 	         |
+				+------------------------+			        |  architecture          |
+	                                                        +------------------------+
+															
+		- Architectural design (process) for identifying the sub-systems making up a system and how they communicate.
+		
+		- Software architecture (document) is an output of the design process (a description of the result from 
+		the process).
+		
+		- An early stage of design process.
+		
+		- Linking requirements engineering and design processes.
+		
+		- Involving:
+			+ Decomposing system into parts or components.
+			
+			+ Identifying major system components and their communications.
+			
+			+ Making design decisions and rationale behind decisions.
+			
+	* Software Architecture:
+		- "The architecture of a software system defines that system in terms of computational components and interactions
+		among those components" (Shaw et al., 1995).
+		
+		- "Is the structure or structures of the system, which comprise software elements, the externally visible properties
+		of those elements, and the relationships among them" (Bass et al., 2003).
+		
+		- A simple representation is a block diagram presenting an overview of system structure:
+			+ Using boxes and lines.
+			
+			+ Useful for communication with stakeholders and for project planning.
+		
+	* Sub-systems vs. Modules:
+		- A sub-system:
+			+ Is a system in its own right.
+			
+			+ Its operation is independent of the services provided by other sub-systems.
+			
+			+ Example: Google maps embedded in an app.
+			
+		- A module (component):
+			+ Is a component that provides services to other components but would not normally be considered as a 
+			seperate system.
+			
+			+ Example: UI component on your website.
+		
+	* Advantages of Software Architecture:
+		- Stakeholder communication: Architecture used as a focus of discussion by system stakeholders.
+		
+		- System analysis:
+			+ Analysis of whether the system can meet its non-functional requirements.
+		
+			+ Future extensions.
+			
+		- Large-scale reuse: Architecture may be reusable across a range of systems.
+		
+	* Characteristics of Software Architecture:
+		- Performance: Localize critical operations and minimize communications. Use large rather than fine-grain components.
+		
+		- Security: Use a layered architecture with critical assets in the inner layers.
+		
+		- Safety: Localize safety-critical features in a small number of sub-systems.
+		
+		- Availability: Include redudant components and mechanisms for fault tolerance.
+		
+		- Maintainability: Use fine-grain, replaceable components.
+		
+		- Architectural Conflicts:
+			+ Using large-grain components improves performance but reduces maintainability.
+			
+			+ Introducing redudant data improves availability but makes security more difficult.
+			
+			+ Localizing safety-related features usually means more communication so degraded performance.
+			
+	* Architecturally Significant Requirements:
+		- Key requirements having a significant impact on the architecture, address non-functional concerns and some 
+		high-priority functional needs.
+		
+		- Guide the architectural design process by:
+			+ Influencing technology choices (e.g., databases, frameworks, deployment platforms).
+			
+			+ Defining constraints on the design (e.g., data residency laws affecting cloud architecture).
+			
+			+ Shaping trade-offs between different quality attributes (e.g., performance vs. maintainability).
+			
+			+ Ensuring the system can meet business, operational, and technical goals.
+			
+		- Types of Architecturally Significant Requirements:
+			+ Non-functional requirements:
+				# Performance: The system must handle 1000 transactions per second.
+				
+				# Scalability: The system must support growth to 1 million users without major redesign.
+				
+				# Security: The application must comply with ISO 27001 standards.
+				
+				# Availability: The system should achieve 99.99% uptime.
+				
+			+ High-priority functional requirements:
+				# Features or functionality that are central to the system and significantly affect architectural decisions.
+				
+				# Example: A real-time video processing application requires a low-latency streaming pipeline.
+
+	---------------------------------------------------------------------------------------------------------------
+	
+	ARCHITECTURAL DESIGN DECISIONS
+	* Architectural Design Decisions:
+		- Architecture is the result of design decisions made during (architectural) design.
+		
+		- Architects made series of design decisions during design (e.g., how many components, how they communicate,
+		how components are secured, which languages used).
+		
+		- Elements of a design decision, issues, decision, assumptions, rationale (reasons), alternatives, implications.
+		
+	* Questions for architectural design:
+		- Is there a generic application architecture that can be used?
+		
+		- How will the system be distributed?
+		
+		- What architectural styles are appropriate?
+		
+		- How will the system be decomposed into modules?
+		
+		- What control strategy should be used?
+		
+		- How will the architectural desgin be evaluated?
+		
+		- How should the architecture be documented?
+	
+	* Examples of Design Decisions:
+		- Use AngularJs framework for web.
+		
+		- Use the cross-platform framework React Native for mobile apps.
+		
+		- Use MySQL for database.
+		
+		- Use MVC model for server-side.
+		
+		- Use Java for back-end/server-side components.
+		
+		- Daily backup.
+		
+		- Issue: System has to be maintainable.
+		
+		- Decision: Three-tier architecture, using object-oriented language.
+		
+		- Rationale:
+			+ With three-tier architecture, it is easy to change each tier without affecting others like interface or logic.
+			
+			+ OO program is easy to maintain than functional program.
+			
+		- Alternatives: MVC, service-oriented architecture, n-tier.
+	
+	---------------------------------------------------------------------------------------------------------------
+	
+	ARCHITECTURAL STYLES
+	* Architectural Styles:
+		- An architectural style describes a certain reusable arrangement of architectural elements.
+		
+		- An architectural style describes a common solution to a particular architectural problem.
+		
+		- Examples, MVC, n-tier, service-oriented.
+		
+		- Architectural style vs. Design pattern:
+			+ Design pattern: A common solution to design problem.
+				# Does not address structure of a complete system.
+				
+				# Micro-architecture (at low-level design).
+				
+			+ Architectural style is at high-level design.
+			
+		- Benefits:
+			+ An awareness of architectural styles can simplify the problem of defining system architectures.
+			
+			+ Reuse: Knowledge of how to solve a common and repeatable problem.
+			
+		- A style is described in form of:
+			+ Problem: What problem the style describes.
+			
+			+ Context: Constraints and characteristics of environment.
+			
+			+ Solution: How to solve the problem.
+			
+	* Common Architectural Styles:
+		- Repository Style.
+		
+		- Client-Server Style.
+		
+		- Peer-to-Peer Style.
+		
+		- Layered Style.
+		
+		- Model-View-Controller Style.
+		
+		- Object Style.
+		
+		- Pipes and Filters Style.
+		
+		- Interrupt-driven Style.
+		
+		- Service-oriented Architecture.
+		
+		- Microservice Architecture.
+		
+	* Repository Style:
+		- Sub-systems/components exchange data:
+			+ Shared data is held in a central database or repository.
+			
+			+ Data may be accessed by all sub-systems.
+			
+		- Repository style is often used when sharing large amounts of data.
+		
+		- Advantages:
+			+ Effient to share large amounts of data.
+			
+			+ Sub-systems need not be concerned with how data is produced.
+			
+			+ Centralized management (e.g., backup, security, etc).
+			
+		- Disadvantages:
+			+ Sub-systems must agree on a repository data model (inevitably a compromise).
+			
+			+ Data evolution is difficult and expensive.
+			
+			+ No scope for specific management policies.
+	
+			+ Difficult to distribute efficiently.
+	
+	* Client-Server Style:
+		- Shows how data and processing is distributed across a range of components.
+		
+		- Consisting of:
+			+ Set of stand-alone servers providing specific services.
+			
+			+ Set of clients calling on these services.
+			
+			+ Network allowing clients to access servers.
+			
+		- Advantages:
+			+ Distribution of data is straightforward.
+			
+			+ Makes effective use of networked systems.
+			
+			+ May require cheaper hardware.
+			
+			+ Easy to add new servers or upgrade existing servers.
+			
+		- Disadvantages:
+			+ No shared data model so sub-systems use different data organization.
+			
+			+ Data interchage may be inefficient.
+			
+			+ Redudant management in each server.
+			
+			+ No central register of names and services.
+			
+	* Peer-to-Peer Style:
+		- Each node in the network can acts as both client and a server.
+			+ No central server controlling the communication.
+			
+			+ Instead, all nodes can communicate directly with each other.
+			
+		- Advantages:
+			+ Scalability: Easily scale as more nodes join the network.
+			
+			+ Resilience: More resilient to failures.
+			
+			+ Distributed computing.
+			
+			+ Privacy and anonymity: No central authority overseeing all communications.
+			
+	* Layered Style:
+		- Organize the system into a set of layers, each layer provides a set of services.
+		
+		- Support the incremental development of different layers, when a layer interface changes, only the adjacent
+		layer is affected.
+		
+		- Advantages:
+			+ Separation of concerns.
+			
+			+ Reuse.
+			
+			+ Reduce impact of changes on user interface.
+			
+		- Disadvantages:
+			+ Inflexible in communications among layers.
+			
+			+ Performance problem due to going through many layers.
+			
+	* Model-View-Controller Style:
+		- Originally introduced for UI apps.
+		
+		- Now popular for Web apps.
+		
+		- Components:
+			+ Model: Data, logic processing.
+			
+			+ View: Presentation.
+			
+			+ Controller:
+				# Accepting commands, inputs.
+				
+				# Converting, passing commands.
+				
+	* Object Style:
+		- Abstract data type style.
+		
+		- Structure the system into a set of loosely coupled objects with well-defined interfaces.
+		
+		- Object-oriented decomposition is concerned with identifying.
+			+ Object classes.
+			
+			+ Object class's attributes and operations.
+			
+		- Advantages:
+			+ Objects are loosely coupled, their implementation can be modified without affecting other objects.
+			
+			+ Objects may reflect real-world entities.
+			
+			+ OO implementation languages are widely used.
+			
+		- Disadvantages:
+			+ Object interface changes may cause problems.
+			
+			+ Complex entities may be hard to represent as objects.
+			
+	* Pipe and Filters Style:
+		- System decomposed into a series of computational components or filters.
+		
+		- Filter process data independently.
+		
+		- Data travels through filters via pipes.
+		
+		- Advantages:
+			+ Supports transformation reuse.
+			
+			+ Intuitive organization for stakeholder communication.
+			
+			+ Easy to add new transformations.
+			
+			+ Relatively simple to implement as either a concurrent or sequential system.
+			
+		- Disadvantages:
+			+ Requires a common format for data transfer along the pipeline.
+			
+			+ Difficult to support event-based interaction.
+			
+	* Interrupt-driven Style:
+		- Used in real-time systems where fast response to an event is essential.
+		
+		- There are interrupt types with a handle defined for each type.
+		
+		- Each interrupt type is associated with a memory location and a hardware switch.
+		
+		- Disadvantages: Allows fast response but complex to program and difficult to validate.
+		
+	* Service-oriented Architecture: Software components, or services, are organized and exposed over a network as 
+	interoperatable services that can be used to achieve specific business goals.
+		- Modularity.
+		
+		- Interoperatability.
+		
+		- Reusability.
+		
+		- Loose coupling.
+		
+	* Microservice Architecture: Large application is broken down into smaller, independent services that can be developed,
+	deployed, scaled independently.
+		- Autonomy.
+		
+		- Resilience.
+		
+		- Scalability.
+		
+		- Flexibility.

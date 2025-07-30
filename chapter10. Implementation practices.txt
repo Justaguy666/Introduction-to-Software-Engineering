@@ -1,0 +1,198 @@
+	CODING PRINCIPLES
+	* Coding Principles: Coding principles are guidelines that an industry, organization, team or individual adopt to
+	improve software designs and code implementation.
+	
+	* Common Coding Principles:
+		- Uniform variable naming principle: A good variable name should describe the variable's purpose and its type.
+		
+		- Uniform source code repository structure principle: Structuring code in a source code repository systematically
+		in a certain way makes it easy for other developers to discover wanted information quickly.
+		
+		- Function single return statement principle: Prefer a single return statement at the end of a function to clearly
+		communicate the return value's meaning and make refactoring the function easier.
+		
+		- Prefer statically typed language principle: Prefer a statically typed language when implementation production
+		software. You can use an untyped language like Python for non-production code like integration, end-to-end, and 
+		automated non-functional tests. And you can use Bash shell scripting for small scripts.
+		
+		- Refactoring principle: You cannot write the perfect code on the first try, so you should always reserve some time
+		for future refactoring.
+		
+		- Static code analysis principle: Let the computer find bugs and issues in the code for you.
+		
+		- Error/Exception handling principle: An error is something that can happen, and one should be prepared for it.
+		An exception is something that should never happen.
+		
+		- Do not pass or return null principle:
+			+ When you return a value from a function, never return a null value. You should return an optional value 
+			instead.
+			
+			+ When you pass arguments to a function, never pass a null value. The called function usually never expects
+			to be called with null arguments.
+			
+		- Avoid off-by-one errors principle: Off-by-one errors usually result from the fact that collections in programming
+		languages are indexed with zero-based indexes.
+		
+		- Be critical when googling principle:
+			+ You should always analyze code taken from the web to see if it meets the criteria for production code.
+			
+			+ When you provide answers for other people, try to make code as production-like as possible.
+			
+	---------------------------------------------------------------------------------------------------------------
+	
+	CODE REFACTORING
+	* Code Smell and Refactoring:
+		- Code smell: A result of poor or misguilded programming.
+		
+		- Refactoring: A process of restructing code, while not changing its original functionality.
+		
+	* Code Smells:
+		- Bloaters: Long methods or large classes that hard to work with.
+			+ Long method:
+				# Contain too many lines of code.
+				
+				# Longer than ten lines should be considered.
+				
+			+ Long parameter list: More than three or four parameters for a method.
+			
+			+ Large class: Contains many fields/methods/lines of code.
+		
+		- Object-Orientation Abusers: Incomplete or incorrect application of OOP principles.
+			+ Alternative classes with different interfaces: Two classes perform identical functions but have different method
+			names.
+		
+			+ Refused bequest: Subclass uses only some of the methods and properties inherited from its parents.
+			
+			+ Switch statements: Complex switch operator or sequence of if statements.
+			
+			+ Temporary field: Get it value only under certain circumstances.
+		
+		- Change preventers: Change in one place needs make changes in other places.
+			+ Divergent change: Many-to-one (many changes affect one class).
+			
+			+ Shotgun surgery: One-to-many (one change affects many classes).
+			
+			+ Parallel inheritance hierarchies: Creating a subclass for a class needs to create a subclass for another class.
+		
+		- Dispensable: Something pointless and unneeded.
+			+ Comments: A method is filled with explanatory comments.
+			
+			+ Duplicate code: Code in multiple places that is the same or very similar.
+			
+			+ Data class: A class that contains only fields.
+		
+		- Coupler: Contribute to excessive coupling between classes.
+			+ Feature envy: A method accesses the data of another object more than its own data.
+			
+			+ Inappropriate intimacy: One class uses the internal fields and methods of another class.
+			
+			+ Message chains: A series of calls resembling $a -> b() -> c() -> d().
+			
+			+ Middleman: A class performs only one action, delegating work to another class.
+		
+	* Refactoring:
+		- Rename:
+			+ This is probably the single most used refactoring technique.
+			
+			+ You often don't get the names right on the first try and need to do renaming.
+			
+			+ Modern IDEs offer tools that help rename things in the code: interfaces, classes, functions, and variables.
+			
+		- Extract method:
+			+ This is probably the second most used refactoring technique.
+			
+			+ When you implement a public method of a class, the method quickly grows in the number of code lines.
+				# A function should contain a maximum of 5-99 statements to keep it readable and understandable.
+				
+				# When a public method is too long, you should extract one or more private methods and call these private
+				methods from the public method.
+				
+			+ Every modern IDE has an extract method refactoring tool that allows you to extract private methods easily.
+			
+			+ In some cases, the refactoring is not automatic. For example, if the code to be extracted contains a return,
+			break, or continue statement that affects the execution flow of the function (causing multiple return points).
+			
+		- Extract constant: If you have a complex expression (boolean or numeric), assign the value of the expression to a
+		constant. The name of the constant conveys information about the expression.
+		
+		- Replace conditionals with polymorphism:
+			+ Suppose you encounter a large switch-case statement or if/else-if structure in your code (not considering code
+			in factories).
+				# It means your software component does not have a proper object-oriented design.
+				
+				# You should replace the conditionals with polymorphism.
+				
+			+ When you introduce proper OOD in your software component:
+				# Move the functionality from a switch statement's case branches to different classes that implement a particular
+				interface.
+				
+				# Move the code from if and else-if statements to different classes that implement a certain interface.
+				
+				-> Eliminate the switch-case and if/else-if statements and replace them with a polymorphism method call.
+				
+		- Introduce parameter object: If you have more than 5-7 parameters for a function, you should introduce a parameter
+		object to reduce the number of parameters to keep the function signature more readable.
+		
+	---------------------------------------------------------------------------------------------------------------
+	
+	VERSION CONTROL
+	* Version Control:
+		- A system that tracks and manages changes to files over time.
+		
+		- Used in software development to manage source code but can be applied to any type of file.
+		
+		- Types of version control system (VCS):
+			+ Local version control systems.
+			
+			+ Centralized version control systems (CVCS).
+			
+			+ Distributed version control systems (DVCS).
+			
+	* Key features:
+		- Change tracking.
+		
+		- Collaboration.
+		
+		- Branching and merging.
+		
+		- Rollback.
+		
+		- Conflict resolution.
+		
+	* Benefits:
+		- Improved collaboration.
+		
+		- Code integrity.
+		
+		- Efficient debugging.
+		
+		- Support for experimentation.
+		
+	* Popular VCSs:
+		- Git:
+			+ Distributed system, widely used, fast, and flexible.
+			
+			+ Works with tools like GitHub, GitLab, and Bitbucket.
+			
+		- Subversion (SVN): Centralized system, historically popular but less common now.
+		
+		- Mercurial: Another distributed system, similar to Git but simpler for some use cases.
+		
+		- Team Foundation Version Control (TFVC): Centralized system, part of Microsoft's Azure DevOps.
+		
+	* Common Git Terminilogy:
+		- Repository (Repo): A collection of files and their version history.
+		
+		- Commit: A snapshot of changes in the repository.
+		
+		- Branch: A parallel version of the repository for developing features or experimenting.
+		
+		- Merge: Combining changes from one branch into another.
+		
+		- Clone: Copying a repository from a server to a local machine.
+		
+		- Pull: Fetching and integrating changes from a remote repository.
+		
+		- Push: Sending local changes to a remote repository.
+		
+		- Staging Area: A temporary area to prepare files before committing.

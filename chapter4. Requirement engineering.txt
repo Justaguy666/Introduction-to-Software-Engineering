@@ -1,0 +1,490 @@
+	OVERVIEW
+	* What is Requirement?
+		- Requirements specify the services that a system provides and the constraints for the system.
+		
+		- Services and constraints are mainly from the stakeholders.
+		
+		- Requirements may serve a dual function:
+			+ The basis for a bid or a contract - high level.
+			
+			+ The basis for the development team - detailed level.
+			
+	* System Stakeholders:
+		- Any person or organiztion who is affected by the system.
+		
+		- Stakeholder Types:
+			+ End users.
+			
+			+ System owners.
+			
+			+ System managers.
+			
+			+ External Stakeholders.
+			
+		- Example: ATM Stakeholders
+			+ Bank customers
+			
+			+ Representatives of other banks.
+			
+			+ Bank managers.
+			
+			+ Counter staff.
+			
+			+ Database administrators.
+			
+			+ Security managers.
+			
+			+ Marketing department.
+			
+			+ Hardware and software maintenance engineers.
+			
+			+ Banking regulators.
+			
+	* Viewpoints:
+		- Viewpoints are a way of structuring the requirements to represent perspectives of different stakeholders.
+		
+		- Types of Viewpoints:
+			+ Interactor viewpoints:
+				# People or other systems that interact directly with the system.
+				
+				# In an ATM, the customers and the account database are interactor viewpoints.
+				
+			+ Indirect viewpoints:
+				# Stakeholders who do not use the system themselves but who influence the requirements.
+				
+				# E.g., management and security staff are indirect viewpoints.
+				
+			+ Domain viewpoints:
+				# Domain characteristics and constraints that influence the requirements.
+				
+				# E.g., standards for inter-bank communications.
+				
+	* Requirements Abstract Levels:
+		- User Requirements:
+			+ Statemens in natural language of system's services and their operational constraints.
+			
+			+ User point of view.
+			
+			+ High-level requirements.
+			
+		- System Requirements:
+			+ A structured document detailing system's functions, services and operational constraints.
+			
+			+ Define what should be implemented.
+			
+			+ Technical point of view (designer, implementer, tester).
+			
+			+ Low-level requirements.
+			
+		- Example:
+			+ User requirements:
+				# As a reader, i want to find books by author name and year of publication.
+				
+				# As a registered user, i do not want my password to be easily guessed.
+				
+			+ System requirements:
+				# 1:
+					@ Step 1: Reader provides author name, year of publication.
+				
+					@ Step 2: Reader submits search request.
+				
+					@ Step 3: System notifies waiting.
+					
+					@ Step 4: System lists results by book title.
+					
+				# 2: User password must be at least 8 characters long, contain at least one number, and be encrypted when
+				stored in the database.
+				
+	* Requirement Types:
+		- Functional Requirement:
+			+ State how the system should react to particular inputs and how the system should behave in particular situations.
+			
+			+ Describe functionality or system services.
+			
+			+ Functional user requirements: High-level statements of what the system should do.
+			
+			+ Functional system requirements: Describe the system services in detail.
+			
+			+ Example: The library system
+				# Introduction:
+					@ A library system that provides a single interface to a number of databases of articles in different libraries.
+					
+					@ Users can search for, download and print these articles for personal study.
+					
+				# Functional requirements:
+					@ The user shall be able to search either all of the initial set of databases or select subset from it.
+					
+					@ The system shall provide appropriate viewers for the user to read documents in the document store.
+					
+			+ Good functional requirements:
+				# Precision:
+					@ Problems arise when requirements are not precisely stated.
+					
+					@ Ambinguous requirements may be interpreted in different ways by the developers and users.
+					
+				# Completeness: They should include descriptions of all facilities required.
+				
+				# Consistency: There should be no conflicts or contradictions in the descriptions of the system facilities.
+				
+				-> In practice, it is impossible to produce a complete and consistent requirements.
+			
+		- Non-functional requirements:
+			+ State constraints on services or functions offered by the system (timing constraints, constraints on the development
+			process, standards, etc.).
+			
+			+ State constraints on services offered by the system.
+			
+			+ Non-functional requirement types:
+				# Product requirements:
+					@ Performance: Related to the speed, scalability, and responsiveness of the system.
+					
+					@ Security:
+						$ Related to the protection of the system and its data from unauthorized access.
+						
+						$ As well as the alibity to detect and recover from security breaches.
+						
+					@ Usability: Related to the ease of use and understandability of the system for the end-users.
+					
+					@ Reliability: Related to the system's alibity to function correctly and consistently under normal 
+					and abnormal conditions.
+					
+					@ Maintainability: Related to the the ease of maintaining the system, including testing, debugging, and
+					modifying the system.
+					
+					@ Portability: Related to the ability of the systems to be easily transferred to different hardware or 
+					software environments.
+					
+					@ Compliance: Related to adherence to laws, regulations, industry standards, or company policies.
+				
+				# Organizational requirements: Delivery, implementation, standards, ...
+				
+				# External requirements: Ethical, privacy, safety, ...
+				
+			+ Non-functional requirements may be more critical than functional requirements.
+			
+			+ Non-functional requirements often stated as goals.
+			
+			+ Verifiable non-functional requirement: A statement using some measure that can be objectively tested.
+			
+			+ Example:
+				# A system goal: The system should be easy to use by experienced controllers and should be organized in 
+				such a way that user errors are minimized.
+				
+				# A verifiable non-functional requirements:
+					@ Experienced controllers shall be able to use all the system functions after a total of two hours 
+					training.
+					
+					@ After this training, the average number of errors made by experienced users shall not exceed two 
+					per day.
+					
+			+ Requirements measures:
+				# Speed:
+					@ Processed transactions/second.
+					
+					@ User/Event response time.
+					
+					@ Screen refresh time.
+					
+				# Size:
+					@ M Bytes.
+					
+					@ Number of ROM chips.
+					
+				# Ease of use:
+					@ Training time.
+					
+					@ Number of help frames.
+					
+				# Reliability:
+					@ Mean time to failure.
+					
+					@ Probability of unvailability.
+					
+					@ Rate of failure occurrence.
+					
+					@ Availability
+				
+				# Robustness:
+					@ Time to restart after failure.
+					
+					@ Percentage of events causing failure.
+					
+					@ Probability of data corruption on failure.
+					
+				# Portability:
+					@ Percentage of target dependent statements.
+					
+					@ Number of target systems.
+			
+		- Domain Requirements:
+			+ Come from the application domain of the system.
+			
+			+ Reflect characteristics of that domain.
+			
+			+ Derived from the application domain and describe system characteristics and features that reflect the domain.
+			
+			+ Specify new functional requirements, constraints on existing requirements or define specific computations.
+			
+			+ Example: Library system domain requirements
+				# There shall be a standard user interface to all databases which shall be based on the Z39.50 standard.
+				
+				# Because of copyright restrictions, some documents must be deleted immediately on arrival.
+				
+			+ Problems:
+				# Understandability:
+					@ Requirements are expressed in the language of the application domain.
+					
+					@ This is often not easily understood by software engineers developing the system.
+					
+				# Implicities: Domain specialists understand the area so well that they do not think of making the domain 
+				requirements explicit.
+				
+	* Requirements Engineering (RE) Process:
+		- RE process is a set of activities performed to create software requirements.
+		
+		- Processes used for RE vary widely: Dependent on organiztions, domains, process methodologies.
+		
+								+-----------------------+
+								|						|
+								|	Feasibility study	|
+								|						|
+								+-----------------------+
+											|
+											|
+											v
+							  +---------------------------+			+-----------------------+
+							  |							  |         |						|
+							  |	 Requirements gathering	  |         |Requirements management|
+							  |							  |         |						|
+							  +---------------------------+			+-----------------------+
+											|
+											|
+											v
+							 +----------------------------+
+							 |							  |
+							 | Requirements specification |
+							 |						  	  |
+							 +----------------------------+
+											|
+											|
+											v
+							  +---------------------------+
+							  |							  |
+							  |	 Requirements validation  |
+							  |							  |
+							  +---------------------------+
+							  
+	---------------------------------------------------------------------------------------------------------------
+	
+	REQUIREMENT GATHERING
+	* Requirement Gathering:
+		- Also called requirements elicitation or requirements discovery.
+		
+		- Involves technical staff working with customers to find out
+			+ The application domain.
+			
+			+ The services that the system should provide.
+			
+			+ The system's operational constraints.
+			
+		- May involve (stakeholders) end-users, customers, managers, engineers, domain experts, maintainers, operators, etc.
+		
+	* Problems of Requirements Gathering:
+		- Stakeholders don't know what they really want.
+		
+		- Stakeholders express requirements in their own terms.
+		
+		- Different stakeholders may have conflicting requirements.
+		
+		- Organizational and political factors may influence the system requirements.
+		
+		- Requirements change during the process (New stakeholders may emerge and the business environment change).
+		
+	* Process Activities:
+		- Requirements discover: Interacting with stakeholders to discover their requirements.
+		
+		- Classification and Organization: Group related requirements and organizes them into coherent clusters.
+		
+		- Prioritization and Negotiation: Prioritizing requirements and resolving requirements conflicts.
+		
+		- Requirements Documentation: Requirements are documented.
+		
+	* Requirements Gathering Methods:
+		- Interviewing:
+			+ Discover user requirements directly.
+			
+			+ Types:
+				# Direct: in-person, phone, conference.
+				
+				# Indirect: question form, email.
+				
+			+ Questions:
+				# Closed question: Limited answers.
+				
+				# Open question: unlimited answers.
+				
+			+ Limitations:
+				# Time & schedule (client).
+				
+				# Hard to control.
+				
+				# Hard to find out details.
+				
+		- Observing:
+			+ Goals:
+				# Discover requirement indirectly.
+				
+				# Find out business process & problems.
+				
+			+ Types:
+				# Visis business places.
+				
+				# Join a business process.
+				
+				# Internship.
+				
+			+ Limitations:
+				# Time & schedule (development team).
+				
+				# Interfere client business.
+				
+	---------------------------------------------------------------------------------------------------------------
+	
+	REQUIREMENTS SPECIFICATION
+	* Requirement Specification: The process of writing down the user and system requirements in a requirements document
+		- User requirements must be understandable by end users and customers who do not have a technical background.
+		
+		- System requirements are more detailed requirements and may include more technical information.
+		
+	* Specification Methods:
+		- Natural language: Easy to write, but wordy and ambinguous.
+		
+		- Structured natural language: Follow a form.
+		
+		- Format specification: Mathematical equations and programming languages.
+		
+		- Modeling language: Diagram + Form.
+		
+	* Software Requirements Document:
+		- Software requirements specification.
+		
+		- The requirements document is the official statement of what is required of the system developers.
+		
+		- Should include both a definition of user requirements and a specification of the system requirements.
+		
+		- It should set of WHAT the system should do rather than HOW it should do.
+		
+	* IEEE Requirements Standard: Defines a generic structure for a requirements document that must be instantiated for 
+	each specific system
+		- Introduction.
+		
+		- General description.
+		
+		- Specific requirements.
+		
+		- Appendices.
+		
+		- Index.
+		
+	* Requirement Document Structure:
+		- Preface.
+		
+		- Introduction.
+		
+		- Glossary.
+		
+		- User requirement definition.
+		
+		- System architecture.
+		
+		- System requirements specification.
+		
+		- System models.
+		
+		- System evolution.
+		
+		- Appendices.
+		
+		- Index.
+		
+	* Requirement Documents in Practice:
+		- RUP: Two main types of requirements documents
+			+ Vision document.
+			
+			+ Use-case specifications.
+			
+		- Agile methods: Scrum and XP
+			+ Vision or objectives document.
+			
+			+ User stories.
+			
+	---------------------------------------------------------------------------------------------------------------
+	
+	REQUIREMENTS VALIDATION
+	* Requirements Validation:
+		- Validate that the requirements reflect what the customer wants.
+		
+		- Errors in requirements result problems in design, code, and test.
+		
+		- Requirements error costs are high: Fixing errors caused by incorrect requirements after delivery is much higher
+		than in early stages.
+		
+	* Requirements Checking:
+		- Validity: Does the system provide the functions which best support the customer's needs?
+		
+		- Verifiability: Can the requirements be checked?
+		
+		- Consistency: Are there any requirements conflicts?
+		
+		- Completeness: Are all functions required by the customer included?
+		
+		- Realism: Can the requirements be implemented given available budget and technology.
+		
+	* Requirements Validation Techniques:
+		- Requirements reviews
+			+ Systematic manual analysis of the requirements.
+			
+			+ Most common approach.
+			
+		- Prototyping: Using an executable model of the system to check requirements.
+		
+		- Test-case generation: Developing tests for requirements to check testability.
+		
+	* Requirements Reviews:
+		- Regular reviews should be held while requirements are defined.
+		
+		- Requirements analysts, designers, developers, testers should be involved in reviews.
+		
+		- Reviews may be formal or informal.
+		
+		- Good communications help resolve problems at an early stage.
+		
+	---------------------------------------------------------------------------------------------------------------
+	
+	REQUIREMENTS MANAGEMENT
+	* Requirements Management:
+		- Requirements management is a process of managing changing requirements during the project.
+		
+		- Requirements are inevitably incomplete and inconsistent.
+	
+	* Requirements Change:
+		- New and changed business needs.
+		
+		- Better understanding of the system.
+		
+		- Priority of requirements from different viewpoints changes.
+		
+		- Business and technical environments change during project.
+		
+	* Requirements Change Management:
+		- Performed throughout the project.
+		
+		- Main steps:
+			+ Change request: Request changes from customers, users, team.
+			
+			+ Change analysis and costing: Assess effects of change on other requirements.
+			
+			+ Change implementation:
+				# Modify requirements and affected docs.
+				
+				# Change design, code, and test.

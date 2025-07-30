@@ -1,0 +1,343 @@
+	VERIFICATION AND VALIDATION
+	* Verification vs. Validation:
+		- Verification:
+			+ "Are we building the product right".
+			
+			+ Making sure that software conforms to its specification.
+			
+		- Validation:
+			+ "Are we building the right product".
+			
+			+ Making sure software does what users really need.
+			
+	* V&V Process:
+		- A whole life-cycle process, V&V must be applied at each stage in the software process.
+		
+		- Principle objectives of V&V process:
+			+ Discovery of defects in software.
+			
+			+ Assessment of whether software is useful and usable.
+			
+			+ Establishing confidence in software.
+			
+	* Static and Dynamic V&V:
+		- Software inspections (static V&V):
+			+ Concerned with analysis of static software representation to discover problems.
+			
+			+ E.g., requirements review, code review, etc.
+			
+		- Software testing (dynamic V&V):
+			+ Concerned with excercising and observing software behavior.
+			
+			+ Involving running software with test data.
+			
+	* Inspections and Testing:
+		- Inspections and testing are complementary and not opposing verification techniques.
+		
+		- Both should be used during the V&V process.
+		
+	---------------------------------------------------------------------------------------------------------------
+	
+	SOFTWARE INSPECTION
+	* Software Inspections:
+		- Examine work products to discover anomalies and defects.
+		
+		- Do not require execution of a system.
+		
+		- Can be applied to any representation of the system (requirements, plan, design, configuration data, 
+		test data, code, etc.).
+		
+		- An effective technique for:
+			+ Discovering errors.
+			
+			+ Reducing problems in project.
+			
+			+ Mitigating risks in project.
+			
+	* Code Inspection/Review:
+		- Formalized approach to document reviews.
+		
+		- Intended explicity for defect detection.
+		
+		- Defects may be:
+			+ Logical errors.
+			
+			+ Anomalies in code.
+			
+			+ Coding standard violations.
+			
+			+ Potential issues concerning performance, security, etc.
+			
+	* An inspection process:
+		
+		Planning -> Overview Meeting -> Invidual Preparation -> Inspection Meeting -> Rework -> Follow-up
+		
+	* Inspection Roles:
+		- Author: The programmer or designer responsible for producing the program or document, fixing defects.
+		
+		- Inspector: Finds errors, omissions and inconsistencies in programs and documents.
+		
+		- Reader: Presents the code or document at an inspection meeting.
+		
+		- Scribe/Recorder: Records the results of the inspection meeting.
+		
+		- Moderator: Manages the process and facilitates the inspection. Reports process results to the Chief moderator.
+		
+	* Inspection Checklists:
+		- Checklist of common errors should be used to drive the inspection.
+		
+		- Error checklists are programming language dependent.
+		
+		- Examples:
+			+ For each conditional statement, is the condition correct?
+			
+			+ Is each loop certain to terminate?
+			
+			+ Are compound statements correctly bracketed?
+			
+			+ In case statements, are all possible cases accounted for?
+			
+			+ If a break is required after each case in case statements, has it been included?
+			
+	* Automated Static Analysis:
+		- Static analyzers are software tools for source text processing.
+		
+		- They parse the program text and try to discover potentially erroneous conditions.
+		
+		- They are very effective as an aid to inspections.
+		
+		- They are a supplement to but not a replacement for inspections.
+		
+	* Stage of Static Analysis:
+		- Control flow analysis: Checks for loops with multiple exit or entry points, finds unreachable code, etc.
+		
+		- Data use analysis: Detects uninitialized variables, variables written twice without an interventing assignment,
+		variables which are declared but never used, etc.
+		
+		- Interface analysis: Checks the consistency of routine and procedure declarations and their use.
+		
+		- Information flow analysis:
+			+ Identifies the dependencies of output variables.
+			
+			+ Does not detect anomalies itself but highlights information for code inspection or review.
+			
+		- Path analysis:
+			+ Identifies paths through the program and sets out the statements executed in that path.
+			
+			+ Potentially useful in the review process.
+			
+		- Both these stages generate vast amounts of information, they must be used with care.
+		
+	* Use of Static Analysis:
+		- Particularly valuable when a language such as C is used.
+		
+		- Such language has weaking typing and hence many errors are undetected by the compiler.
+		
+		- Less cost-effective for languages that have strong type checking, can therefore detect many errors during compilation.
+		
+	---------------------------------------------------------------------------------------------------------------
+	
+	SOFTWARE TESTING
+	* Software Testing Life Cycle (STLC):
+		- What is STLC? The STLC is the process of executing different activities during testing.
+		
+		- Phases of STLC:
+			+ Requirement analysis.
+			
+			+ Test planning.
+			
+			+ Test case design.
+			
+			+ Environment setup.
+			
+			+ Test execution.
+			
+			+ Test cycle closure.
+			
+	* Levels of Software Testing:
+		- Unit Testing:
+			+ Component/Module/Program testing.
+		
+			+ Each unit is independently tested.
+			
+			+ Performed by developers.
+			
+			+ Bugs are fixed immediately, no need to report.
+		
+		- Integration Testing:
+			+ Test two or more units/sub-systems.
+			
+			+ Test the interface/interaction between units.
+			
+			+ Performed by developer and tester.
+			
+			+ Integration approaches:
+				# Big-bang integration.
+				
+				# Incremental integration.
+				
+		- System Testing:
+			+ The final step of integration testing.
+			
+			+ Test the complete and fully integrated system.
+			
+			+ Performed by tester and business analyst.
+			
+			+ Include both functional and non-functional testing.
+			
+		- Acceptance Testing:
+			+ Final step of validation.
+			
+			+ Ensure that the system meets user expectations.
+			
+			+ Performed by end-user.
+			
+	* Types of Software Testing:
+		- Functional Testing:
+			+ Functional testing = Black-box testing.
+			
+			+ Based on functional requirements.
+			
+			+ Detect functional defects.
+			
+			+ Don't care how to implement.
+			
+		- Non-functional Testing:
+			+ Performance testing.
+			
+			+ Usability testing.
+			
+			+ Security testing.
+			
+			+ Configuration/Installation testing.
+			
+			+ Back-up/Recovery testing.
+			
+		- Structural Testing:
+			+ Structural testing = White-box testing.
+			
+			+ Design test cases based on source code.
+			
+			+ Code coverage:
+				# Statement coverage.
+				
+				# Decision coverage.
+				
+				# Condition coverage.
+				
+				# Path coverage.
+				
+				# Loop coverage.
+				
+		- Change-related Testing:
+			+ Test after bugs are fixed.
+			
+			+ Re-testing/Confirmation testing:
+				# Execute the exact test cases that found the bugs.
+				
+				# Confirm the bugs have been fixed.
+				
+				# No guarantee that new bugs have not occurred.
+				
+			+ Regression testing:
+				# Execute all previously passed test cases.
+				
+				# Find new bugs that occur.
+				
+	* Test Case Design:
+		- Test case:
+			+ A test that (ideally) executes a single well-defined-test objective.
+			
+			+ A specific set of test data and associated procedures developed for a particular objectives.
+			
+		- Why write test case?
+			+ Accountability.
+			
+			+ Reproducibility.
+			
+			+ Tracking.
+			
+			+ Automation.
+			
+			+ To find bugs.
+			
+			+ To verify that tests are being executed correctly.
+			
+			+ To measure test coverage.
+			
+		- Test case essentials:
+			+ Tracking information.
+
+			+ Test case ID.
+			
+			+ Test case description.
+				# Objective/Title.
+					@ The most important essential.
+					
+					@ Gives reader a description and idea of the test.
+					
+					@ A good test name makes review easier.
+					
+					@ Easier to pass to another person, automation team.
+					
+					@ In many cases, may be the only part of the test case documented.
+					
+							Action + Function + Operating Condition
+							
+						$ Action: Verify, Test, Validate, Execute, Run, Print, ...
+
+						$ Function: function, feature, validation point.
+						
+						$ Operating Condition: data, specific condition.
+				
+				# Validation point:
+					@ Step.
+					
+					@ Test data: input/output/default.
+					
+					@ Expected results.
+				
+				# Observed results.
+				
+				# Status: Pass/Fail/Blocked/Skipped.
+				
+				# Test environment.
+				
+				# Script.
+				
+				# Bug ID.
+				
+				# Comments.
+				
+		- What is a good test case?
+			+ Accurate - tests what it is designed to test.
+			
+			+ Economical - no unnecessary steps.
+			
+			+ Repeatable, reusable - keep going on.
+			
+			+ Traceable - to a requirement.
+			
+			+ Appropriate - for test environment.
+			
+			+ Self standing - independent of the writer.
+			
+			+ Self cleaning - picks up after itself.
+			
+		- Test case desgin:
+			+ Involves designing the test cases used to test the system.
+			
+			+ Goal: Create a set of tests that are effective in V&V.
+			
+			+ Design approaches:
+				# Requirements-based testing.
+					@ A general principle of requirements engineering is that requirements should be testable.
+					
+					@ Requirements-based testing is the most common testing technique, consider each requirement and derive
+					a set of tests for that requirement.
+					
+				# Equivalence partition testing: Input data and output results often fall into different classes.
+					@ Each of these classes is an equivalence partition where the program behaves in an equivalent way for
+					each class member.
+					
+					@ Test cases should be chosen from each partition.

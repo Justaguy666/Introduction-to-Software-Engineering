@@ -1,0 +1,222 @@
+	SOFTWARE
+	* What's software?
+		- Software includes computer programs and associated documentation such as
+		requirements, design models and user manuals.
+		
+		- Software products may be:
+			+ Generic - developed to be sold to a range of different customers.
+			
+			+ Custom - developed for a single customer according to their specification.
+			
+		- Software can be created by:
+			+ By developing new programs.
+			
+			+ Configuring generic software systems.
+			
+			+ Reusing existing software.
+			
+			+ AI generated.
+			
+	* Role of software
+		- Economies of all developed nations are dependent on software.
+		
+		- More and more systems are software controlled.
+		
+		- Any things connecting to Internet are software.
+		
+	* Attributes of good software
+		- Maintainability: Software must evolve to meet changing needs.
+		
+		- Reliability: Software must be trustworthy.
+		
+		- Efficiency: Software should not make wasteful use of system resources.
+		
+		- Acceptability:
+			+ Software must be accepted by the users for which it was designed.
+			
+			+ It must be understandable, usable and compatible with other systems.
+			
+	* Software costs:
+		- In the past:
+			+ Software costs often dominate computer system costs.
+			
+			+ Software costs more to maintain (80%) than it does to develop (20%).
+			
+		- Nowadays: With the widespread use of subcription-based software and cloud computing,
+		operational and service costs have become more prominent.
+	
+		-> Key objective of software engineering: cost-effective software development.
+		
+	---------------------------------------------------------------------------------------------------------------
+	
+	SOFTWARE ENGINEERING
+	* What's software engineering?
+		- Software engineering is an engineering discipline that is concerned with 
+		theories, methods, tools for professional software development.
+		
+		- Goal:
+			+ Cost effective (within budget).
+			
+			+ On time.
+			
+			+ High quality.
+			
+			+ Satisfying customer's needs.
+			
+	* Software engineering vs. computer science?
+		- Computer science: Concerned with theory and fundamental.
+		
+		- Software engineering: Concerned with the practicalities of developing and delivering
+		useful software.
+		
+		- Computer science theories are still insufficient to produce successful software.
+		
+	* Software engineering vs. System engineering?
+		- System engineering: Concerned with all aspects of computer-based systems development including
+		hardware, software and process engineering.
+		
+		- Software engineering: Part of this process concerned with developing software.
+		
+	* Costs of software engineering:
+		- Roughly 60% of costs are development costs, 40% are testing costs.
+		
+		- For custom software, evolution costs often exceed development costs:
+			+ Understanding code.
+			
+			+ Changing, upgrading, fixing errors in code.
+			
+			+ New features, requirements, business rules, environments, etc.
+			
+		- Costs vary depending on many factors: Requirements, complexity, personnel, platform, tools, etc.
+		
+	* Biggest trends in software engineering:
+		- Intelligent software engineering:
+			+ Intelligent software engineering: Applying AI for software engineering methods,
+			practices and tools.
+			
+			+ Intelligence software engineering: Software engineering methods, practices and tools
+			for AI-enabled systems.
+			
+		- Low-code and No-code software development:
+			+ Create new software apps with minimal coding.
+			
+			+ Support with the help of AI.
+			
+			+ Tools and platforms available to support low-code and no-code development
+			(Wordpress, Wix, Airtable, Salesforce, Shopify, Webflow, Squarespace, etc.)
+			
+		- CI/CD and DevOps:
+			+ CI/CD:
+				# CI (Continuous integration): Automatically and frequently integrating code changes.
+				
+				# CD (Continuous delivery/deployment): Automatically built, tested and prepared for a
+				release to production.
+				
+			+ DevOps: Development + Operations
+				# Cultural philosophies, practices, and tools.
+				
+				# Shortent the software development lifecycle.
+	
+	---------------------------------------------------------------------------------------------------------------
+	
+	SOFTWARE PROCESS (SOFTWARE DEVELOPMENT PROCESS/SOFTWARE DEVELOPMENT LIFE CYCLE)
+	* What's a software process?
+		- A set of activities whose goal is the development of evolution of software.
+		
+		- Generic activites in software processes:
+			+ Specification - what the system should do and its development constraints.
+			
+			+ Development - production of the software system.
+			
+			+ Validation - checking that the software is what the customer wants.
+			
+			+ Evolution - changing the software in response to changing demands.
+			
+	* What is a software process model?
+		- A simplified representation of a software process, presented from a specific perspective.
+		
+		- Examples of process perspectives are:
+			+ Workflow perspective - sequence of activities.
+			
+			+ Data-flow perspective - information flow.
+			
+			+ Role/action perspective - who does what.
+			
+		- Plan-driven: strict + documentation + plan + heavy process
+			+ Waterfall.
+			
+			+ Iterative development.
+			
+			+ Component-based software engineering.
+			
+			+ Spiral.
+			
+			+ ...
+			
+		- Agile: flexible + individual + collaboration + light process
+			+ Agile.
+			
+			+ Scrum.
+			
+			+ Kanban.
+			
+			+ ...
+		
+	---------------------------------------------------------------------------------------------------------------
+	
+	PROFESSIONAL ETHICS
+	* Professional and ethical responsibility:
+		- Software engineering involves wider responsibility than simply the application
+		of technical skills.
+		
+		- Software engineers must behave in an honest and ethically responsible way.
+		
+		- Ethical behavior is more than simply upholding the law.
+		
+	* Issues of professional responsibility:
+		- Confidentiality: Engineers should normally respect the confidentiality of their
+		employers or clients.
+		
+		- Competence:
+			+ Engineers should not misrepresent their level of competence.
+			
+			+ They should not knowingly accept work which is beyond their competence.
+			
+		- Intellectual property rights:
+			+ Engineers should be aware of local laws governing the use of intellectual property
+			such as patents, copyright, etc.
+			
+			+ They should be careful to ensure that the intellectual property of employers and
+			clients is protected.
+			
+		- Computer misuse: Software engineers should not use their technical skills to misuse
+		other people's computers.
+		
+	* ACM/IEEE Code of ethics:
+		- ACM/IEEE provides code of ethics for software engineering professional.
+		
+		- Code of ethics is used as a guidelines for SE professionals when making their decisions
+		related to their actions.
+		
+	* Code of ethics - principles:
+		- PUBLIC: Software engineers shall act consistently with the public interest.
+		
+		- CLIENT AND EMPLOYER: Software engineers shall act in a manner that is in the best interests
+		of their client and employer consistent with the public interest.
+			
+		- PRODUCT: Software engineers shall ensure that their products and related modifications
+		meet the highest professional standards possible.
+		
+		- JUDGEMENT: Software engineers shall maintain integrity and independence in their professinal judgement.
+		
+		- MANAGEMENT: Software engineering managers and leaders shall subcribe to and promote an ethical approach
+		to the management of software development and maintenance.
+		
+		- PROFESSION: Software engineers shall advance the integrity and reputation of the profession
+		consistent with the public interest.
+		
+		- COLLEAGUES: Software engineers shall be fair to and supportive of their colleagues.
+		
+		- SELF: Software engineers shall participate in lifelong learning regarding the practice of their
+		profession and shall promote an ethical approach to the practice of the profession.
+		

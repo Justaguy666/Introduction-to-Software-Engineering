@@ -1,0 +1,236 @@
+	USER INTERFACE DESIGN
+	* Software Interface:
+		- Software interacts with:
+			+ Users.
+			
+			+ Related systems.
+			
+			-> Through interface.
+		
+		- Types of interface:
+			+ User interface (UI).
+			
+			+ Application programming interface (API).
+			
+	* User Interface:
+		- The user interface is the point at which human users interact with a software application.
+		
+		- UI should be designed to match the skills, experience and expectations of its users.
+		
+		- Users often judge a system by its interface rather than its functionality.
+		
+		- A poorly designed interface:
+			+ Can cause a user to make catastrophic errors.
+			
+			+ Is the reason why so many software systems are never used.
+			
+	* User Interface vs. User Experience:
+		- User interface (UI) refers to the interactivity, look, and feel of a product screen or web page.
+		
+		- User experience (UX) covers a user's overall experience with the product or website.
+		
+	* Human Factors in Interface Design:
+		- Limited short-term memory: Remember about 7 items or information.
+		
+		- People make mistakes: Inappropriate alarms and messages can increase stress.
+		
+		- People are different: A wide range of physical capabilities.
+		
+		- People have different interaction preferences: Some like pictures, some like text.
+		
+	* Design Issues:
+			How should the user interact with the computer system?
+							------------->
+						USER			  COMPUTER SYSTEM 
+							<-------------
+			How should information from the computer system be 
+						 presented to the user?
+						 
+	* Interaction Styles:
+		- Direct manipulation: User can directly make changes and see results.
+		
+		- Menu selection:
+			+ Structure decision making.
+			
+			+ User read a list of items and select the most appropriate.
+		
+		- Form fill-in: Used when data entry is required.
+		
+		- Command language: Must learn syntax and options.
+		
+		- Natural language:
+			+ Response to arbitrary sentence.
+			
+			+ May work with or without speed recognition.
+		
+	* Information Presentation:
+		- Presents system information to system users.
+		
+		- Information:
+			+ Static information: Initialized at the beginning of a session.
+			
+			+ Dynamic information: Changes during a session.
+			
+		- Presentation:
+			+ Digital presentation: Precise values, little screen space.
+			
+			+ Analogue presentation: Show relative values.
+			
+	* Data Visualization:
+		- Concerned with techniques for displaying large amounts of information.
+		
+		- Visualization can reveal relationships between entities and trends in the data.
+		
+	* User Interface Design Steps:
+		- Identify screen list based on use cases.
+		
+		- Draw screen diagram showing screen relationship.
+		
+		- Screen design organizing controls on screen.
+		
+		- Screen specification:
+			+ Explain controls.
+			
+			+ Describe flow of events.
+			
+	* User Interface Design Guidelines:
+		- Color using:
+			+ Consistency.
+			
+			+ Simply.
+			
+			+ Do not use too many colors.
+			
+			+ Be careful of contrast colors.
+			
+		- Message using:
+			+ Consistent.
+			
+			+ Polite.
+			
+			+ Simply.
+			
+			+ Informative.
+			
+		- Data validation:
+			+ Do not trust the users, check all user input data.
+			
+			+ Validation contraints:
+				# Natural constraints.
+				
+				# Business constraints.
+				
+			+ Types of Validation:
+				# Early checking.
+				
+				# Late checking.
+				
+	---------------------------------------------------------------------------------------------------------------
+	
+	OBJECT ORIENTED DESIGN
+	* Class Diagram:
+		- Show classes and relationships.
+		
+		- Static picture of business layer.
+		
+	* Types of Object:
+		- Domain object:
+			+ Real-world entity.
+			
+			+ Take role in business process.
+			
+			+ Has storage data.
+			
+		- System object:
+			+ Created entity.
+			
+			+ Support processing and calculations.
+			
+	* Class Diagram Guidelines:
+		- Step 1: Identify domain objects.
+			+ Convert from ERD.
+			
+			+ Each entity ~ Each class.
+			
+		- Step 2: Identify system objects.
+			+ Based on use-case specification.
+			
+			+ Steps in "screenplay" must be performed by objects.
+			
+			+ Create system objects if needed.
+			
+		- Step 3: Class refine.
+			+ Follow OO rules (Encapsulation, Inheritance, Polymorphism).
+			
+			+ Rule of black-box, encapsulation.
+			
+			+ Data redundancy and reuse, inheritance.
+			
+			+ Data and process classification, polymorphism.
+			
+	---------------------------------------------------------------------------------------------------------------
+	
+	DATA DESIGN
+	* Data (Flow) Diagram:
+		- Show storage units and relationships.
+		
+		- Static picture of data layer.
+		
+	* Types of Data Storage System:
+		- File system:
+			+ Store data in files.
+			
+			+ Self-organize file structures.
+			
+			+ Pros: Simple, fast.
+			
+			+ Cons: Hard to manage large data.
+			
+		- Database system:
+			+ Store data in tables.
+			
+			+ Use database management system (DBMS).
+			
+			+ Pros: Manage large data efficiently.
+			
+			+ Cons: Complex, slow.
+			
+			-> Big data.
+			
+	* Data Diagram Guidelines:
+		- Step 1: Convert from ERD.
+			+ Entities ~ Storage units.
+			
+			+ File system: file.
+			
+			+ Database: table.
+			
+		- Step 2: Define data flows.
+			+ Determine how data moves between processes, storage, and external entities.
+			
+			+ Represented by arrows in data flow diagrams (DFDs).
+			
+			+ Label each data flow with clear, meaningful names (e.g., “Customer Info”, “Order Details”).
+			
+			+ Ensure that each data flow connects exactly two components (e.g., process ↔ storage, external entity ↔ process).
+		
+		- Step 3: Define processes.
+			+ Identify transformations or actions performed on data.
+			
+			+ Represented by circles or rounded rectangles in DFDs.
+			
+			+ Each process should have input and output data flows.
+
+			+ Name processes with action-oriented labels (e.g., “Validate Login”, “Generate Report”).
+			
+			+ Avoid "black holes" (processes with only input) and "miracles" (only output without input).
+			
+	---------------------------------------------------------------------------------------------------------------
+	
+	PROCESS DESIGN (PROCESS SCREENPLAY)
+	* Use-case screenplay in details.
+		- Actors are split into objects.
+			
+		- Interactions split into functions.
+			
+	* Use sequence diagram.

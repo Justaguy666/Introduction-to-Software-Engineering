@@ -1,0 +1,278 @@
+	UNIFIED MODELING LANGUAGE (UML)
+	* Model: 
+		- A simplified representation of a thing from a specific perspective, capturing important aspects of a thing
+		while ignoring others.
+		
+		- Different kinds of models: Process models, use-case models, class models, object models, relationship models, etc.
+		
+		- Forms of software models:
+			+ Text.
+			
+			+ Diagrams.
+			
+			+ Pictures.
+	
+	* System Modeling:
+		- Is the process of developing abstract model of a system, each model presents a different view or perspective
+		of that system.
+		
+		- Represent a system using some kind of graphical notation, based on notations in the UML.
+		
+		- Helps the analyst to understand the functionality of the system and models are used to communicate with 
+		customers.
+		
+	* Why Modeling?
+		- Generally, modeling helps make things more precise, simpler, easy to understand, more complete.
+		
+		- Specially, models help
+			+ Capture and state precisely requirements and domain knowledge.
+			
+			+ Link requirements and design.
+			
+			+ Capture design decisions.
+			
+			+ General usable work products (software artifacts).
+			
+			+ Organize systems, specially large ones.
+			
+			+ Explore and contemplate multiple solutions.
+			
+	* Modeling Language
+		- Formal language used to create models of systems.
+		
+		- Examples of modeling language:
+			+ Unified Modeling Language (UML).
+			
+			+ C4 Model.
+			
+			+ Business Process Model and Notation (BPMN).
+			
+			+ Systems Modeling Language (SysML).
+			
+	* Unified Modeling Language:
+		- A general-purpose modeling language for software system analysis and design.
+		
+		- History:
+			+ Unifying works on OO development methods by Grady Booch, James Rumbaugh, Ivar Jacobson of Rational Software
+			(now part of IBM).
+			
+			+ Adopted by Object Management Group (OMG) as a standard in 1997.
+			
+			+ OMG now responsible for development of UML.
+			
+	* UML Modeling:
+		- Static modeling - structural diagrams:
+			+ Class diagram.
+			
+			+ Package diagram.
+			
+			+ Object diagram.
+			
+			+ Component diagram.
+			
+			+ Deployment diagram.
+			
+		- Dynamic modeling - behavior diagrams:
+			+ Use-case diagram.
+			
+			+ Sequence diagram.
+			
+			+ Collaboration diagram.
+			
+			+ Statechart diagram.
+			
+			+ Activity diagram.
+			
+	---------------------------------------------------------------------------------------------------------------
+	
+	USE-CASE DIAGRAMS
+	* Use-case Diagrams:
+		- Use-case diagrams are used to model the use case view of a system as seen by end-users, analysts, and testers.
+		
+		- Use-case diagrams are usually a part of requirement specifications, accompanying use-case specifications.
+		
+		- Main elements:
+			+ Actors.
+			
+			+ Use cases.
+			
+			+ Relationships.
+			
+	* Benefits of Use-case Diagrams:
+		- Capturing and visualizing precisely functional requirements.
+		
+		- Making connections between requirements, design, implementation, and testing.
+		
+		- Faciliating communication between users and analysts, designers, testers, implementers.
+		
+		- Supporting identifying functionality easily.
+		
+		- Support validation/testing.
+		
+		-> Second most commonly used diagram.
+		
+	* Actors:
+		- An actor represents an external person, process, or anything that interacts with the system.
+		
+		- It represents a role that a person, process, or thing plays with the system.
+			+ One physical user can play multiple roles. Thus, multiple actors can be bound to one physical user.
+			
+			+ Multiple users have the same role, hence, represented by one actor.
+			
+		- Between actors may have a generalization.
+		
+	* Use case:
+		- A use case describes a set of sequences of actions performed by an actor to produce observable results value 
+		to the actor.
+		
+		- At the system level, use cases represent external behavior of a system that is visible to outside users.
+		
+		- A use case specifies WHAT the system does, but not HOW it does.
+		
+		- A use case hides internal structure and operations of a system. It usually represents system-level functions of 
+		a system.
+		
+	* Use-case Description:
+		- The behavior of a use case is described by a flow of events.
+		
+		- A use case has one main flow (basic flow) and alternative flows.
+			+ Basic path.
+			
+			+ Alternative paths.
+			
+			+ Exceptional paths.
+			
+	* Scenarios:
+		- A use case describes a set of sequences which each sequence in the set represents a possible flow in the use case.
+		
+		- A scenario is a specific sequence of events happening.
+			
+		- A scenario is viewed as an instance of a use case.
+		
+	* Use-case Relationships:
+		- Association: Between actors and use cases.
+		
+		- Generalization: Between general use cases and more specific ones.
+		
+		- Include: Between use cases.
+		
+		- Extend: Between use cases.
+		
+	* Include vs. Extend:
+		- An include relationship between use cases specifies that the base use case explicitly incorporates the behavior 
+		of another use case.
+			+ The included use case does not stand alone.
+			
+			+ The base use case is aware of its included use case.
+			
+		- An extend relationship between use cases specifies that the base use case implicity incorporates the behavior
+		of another use case at location specified indirectly by the extending use case.
+			+ The extending use case may stand alone.
+			
+			+ The base use case is not aware of the extending use case.
+			
+	* Notes on Use-case Diagrams:
+		- A well-defined use case should:
+			+ Specify identifiable and reasonably atomic behavior of the system.
+			
+			+ Include common behavior from included use cases.
+			
+			+ Distribute variations into extending use cases.
+			
+		- Number of use cases depends on how to include or extend system behavior.
+		
+		- Only included use cases and actors essential to understanding an aspect.
+		
+		- Layout of elements is important to understanding.
+			+ Minimizing line crosses.
+			
+			+ Group related elements together.
+			
+	---------------------------------------------------------------------------------------------------------------
+	
+	CLASS DIAGRAMS
+	* Class Diagram:
+		- The most commonly used diagram in practice.
+		
+		- Main elements:
+			+ Classes.
+			
+			+ Interfaces.
+			
+			+ Relationships.
+			
+			+ Common mechanisms.
+			
+	* Class:
+		- Defines the set of common objects that have the same attributes, operations, relationships, and semantics.
+		
+		- Represents a thing.
+		
+		- Notation:
+		
+					+-------------------------------------------+
+					|				Employee					| Name: must be unique within its group
+					+-------------------------------------------+
+					|- title: string							| Attributes
+					|- baseSalary: float						|
+					+-------------------------------------------+
+					|<<constructor>> + Employee()				| Operations
+					|<<abstract>> + calcSalary(year: int): float|
+					+-------------------------------------------+
+					
+	* Attribute:
+		- Defines data that characterize a class.
+		
+		- An abstraction of the kind of data or object.
+		
+		- Data type is specified by a semicolon ":".
+		
+	* Operation:
+		- An operation specifies a services that can be requested from objects of the class.
+		
+		- Attribute and operation visibility (#: protected, -: private, +: public).
+		
+	* Interface:
+		- An element that has a set of operations characterizing it behavior.
+		
+		- Notation:
+			+ A circle with a name.
+			
+			+ OR a class with stereotype <<interface>>
+			
+	* Class Relationships:
+		- Most classes associate with others.
+		
+		- Classes have different types of relationship with each other.
+			+ Dependency.
+			
+			+ Generalization.
+			
+			+ Association.
+			
+	* Dependency Relationship:
+		- Represents one class uses another.
+			+ Change in one class may affect the one that uses it.
+			
+			+ E.g., two classes have dependency relationship if
+				# One operation calls another operation on another class.
+				
+				# One class is used as a parameter in another class.
+				
+		- Dependency is less restrictive than other relationships.
+		
+	* Generalization Relationship: A relationship between a general class and more specific class (superclass and subclass).
+	
+	* Association Relationship::
+		- A relationship specifying objects of one class are connected to objects of another.
+		
+		- Typically, one object holds objects (instances) of the same class or another.
+		
+		- Association can have name, roles at both ends.
+		
+	* Multiplicity: Refers to how many objects may be connected across an instance of an association.
+	
+	* Aggregation and Composition:
+		- Composition - Strong Association: When a class owns another class, and is responsible for lifetime.
+		
+		- Aggregation - Weak Association: When a class uses another class but not own it.

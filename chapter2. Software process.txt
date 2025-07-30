@@ -1,0 +1,657 @@
+	OVERVIEW
+	* Software process description:
+		- Process description include:
+			+ Activities in processes: such as specifying a data model, designing a user interface, etc.
+			
+			+ Ordering of the activities.
+	
+		- May also include:
+			+ Products - outcomes of a process activity.
+			
+			+ Roles - responsibilities of the people involved in the process.
+			
+			+ Pre- and post-condition - statements must be true.
+			
+	* Information technology trends:
+		- Tranditional development:
+			+ Stand alone systems.
+			
+			+ Stable requirements.
+			
+			+ Requirements determine capabilities.
+			
+			+ Control over evolution.
+			
+			+ Enough time to keep stable.
+			
+			+ Stable jobs.
+			
+			+ Repeatability-oriented process, maturity models.
+			
+		- Current/Future trends:
+			+ Everything connected.
+			
+			+ Rapid requirements change.
+			
+			+ Capabilities determine requirements.
+			
+			+ No control over evolution.
+			
+			+ Rapid development.
+			
+			+ Outsourced jobs.
+			
+			+ Adaptive process models.
+			
+	* New software development approaches: Current and futures trends lead to changes and new software
+	development approaches (new processes, new tools, new focus, new methods, new practices, new models, ...)
+			
+	* Software development approaches:
+		- Two approaches:
+			+ Plan-driven:
+				# Process activities are planned.
+				
+				# Progress is measured against this plan.
+				
+				# Document-based.
+				
+				# Heavy process.
+				
+			+ Agile:
+				# Planning is incremental.
+				
+				# Change process to reflect changing requirements.
+				
+				# Tacit knowledge.
+				
+				# Light process.
+				
+		- Both have strengths and weaknesses.
+		
+	* Popular plan-driven and agile methods:
+		- Plan-driven methods:
+			+ Waterfall.
+			
+			+ Incremental.
+			
+			+ spiral.
+			
+			+ Rational Unified Process.
+			
+			+ CMMI.
+			
+		- Agile methods:
+			+ Extreme Programming.
+			
+			+ Scrum.
+			
+			+ Crystal.
+			
+			+ Feature Driven Development (FDD).
+			
+	* Software process activities:
+		- Software specification: Customers and engineers define the software that is to be produced and the constraints
+		on its operation.
+		
+		- Software development: Software is designed and programmed.
+		
+		- Software validation: Software is checked to ensure that is what the customer requires.
+		
+		- Software evolution: Software is modified to reflect changing customer and market requirements.
+	
+	---------------------------------------------------------------------------------------------------------------
+	
+	PLAN-DRIVEN METHODS
+	* Plan-driven methods:
+		- Structured approaches to software development that are guided or driven by plans.
+		
+		- Also called as disciplined methods.
+		
+		- Often referred to as tranditional methods.
+		
+		- Often defined in plans and relied on documentation.
+		
+	* Waterfall model:
+	
+				+------------------------+
+				|  Requirements          |
+				|  definition            |<------------------|
+				+------------------------+					 |
+							|Requirements documents			 |
+							v								 |
+				+------------------------+					 |
+				|  Analysis and Design   |<------------------|
+				+------------------------+					 |
+							|Software architecture documents |
+							v								 |
+				+-------------------------------+			 |
+				|  Implementation and          	|			 |
+				|  Unit Testing                	|<-----------|
+				+-------------------------------+			 |
+							|Source code and test cases		 |
+							v								 |
+				+-------------------------------+			 |
+				|  Integration and             	|			 |
+				|  System Testing              	|<-----------|
+				+-------------------------------+			 |
+							|Test results					 |
+							v								 |
+				+-------------------------------+			 |
+				|  Operation and Maintenance   	|------------|
+				+-------------------------------+
+				User manual documents, Training documents
+	
+		- Two stages cannot be performed at the same time.
+			+ Development is not started when requirements are not baselined.
+			
+			+ Baselined requirements are ready to be based on.
+			
+		- Each stage must be completed before doing the next stage.
+		
+		- A stage is completed if a set of criteria is met (Using checklists of criteria check).
+		
+		- Going back to the previous stage is possible.
+		
+		- A set of standard outcomes of each stage is defined.
+		
+		- Waterfall model problems:
+			+ Inflexible partitioning of the project into distinct stages.
+				-> Difficult to respond to changing requirements.
+				
+			+ Only appropriate when the requirements are well-understood.
+				-> Changes will be fairly limited during the design process.
+				-> But, few business systems have stable requirements.
+				
+			+ Mostly used for large systems engineering projects.
+			
+		- Waterfall model revised:
+	
+				+------------------------+
+				|  Requirements          |
+		|------>|  definition            |<------------------|
+		|		+------------------------+					 |
+		|					|								 |
+		|					v								 |
+		|		+------------------------+					 |
+		|-------|  Analysis and Design   |<------------------|
+		|------>|						 |					 |
+		|		+------------------------+					 |
+		|					|								 |
+		|					v								 |
+		|		+-------------------------------+			 |
+		|-------|  Implementation and          	|			 |
+		|------>|  Unit Testing                	|<-----------|
+		|		+-------------------------------+			 |
+		|					|                       		 |
+		|					v								 |
+		|		+-------------------------------+			 |
+		|		|  Integration and             	|			 |
+		|-------|  System Testing              	|<-----------|
+				+-------------------------------+			 |
+							|								 |
+							v								 |
+				+-------------------------------+			 |
+				|  Operation and Maintenance   	|------------|
+				+-------------------------------+
+	
+	* Process iteration:
+		- Project is divided into many iterations.
+			-> Rework can be occur in late iterations.
+			
+		- Iteration can be applied to any of the generic process models.
+		
+		- Two related approaches.
+			+ Incremental model.
+			
+			+ Spiral model.
+			
+	* Incremental model:
+									+---------------------+          +---------------+          +----------+
+						----------->|  Analysis & Design  |--------->| Implementation|--------->| Testing  |
+						|			+---------------------+          +---------------+          +----------+
+                        |                 ^ (Build 1)
+                        |                 
+                        |                 
+		+----------------+			+---------------------+          +---------------+          +----------+
+		|  Requirements  |--------->|  Analysis & Design  |--------->| Implementation|--------->| Testing  |
+		+----------------+			+---------------------+          +---------------+          +----------+
+						|				^ (Build 2)
+						|				
+						|	
+						|	
+						|			+---------------------+          +---------------+          +----------+
+                        |---------->|  Analysis & Design  |--------->| Implementation|--------->| Testing  |
+                                    +---------------------+          +---------------+          +----------+
+                                         ^ (Build 3)
+
+		- Development and delivery is broken down into increments.
+			-> Each increment delivering part of the required functionality.
+			
+		- Requirements are prioritized.
+			-> Highest priority requirements are developed in early increments.
+		
+		- Incremental model benefits:
+			+ System functionality is available earlier.
+			
+			+ Early increments act as a prototype to help elicit requirements.
+			
+			+ Highest priority requirements tend to receive most testing.
+			
+			+ Lower risk of overall project failure.
+
+		- Incremental model problems:
+			+ The process is not visible.
+				-> Managers need regular diverables to measure progress.
+				
+			+ System struture tends to degrade.
+				-> Regular change tends to corrupt its structure.
+	
+	* Spiral model:
+				
+				      +------------------------+
+                      |        Plan            |
+                      |  Requirements Gathering|
+                      +------------------------+
+                                |
+                                v
+                      +-----------------------------+
+                      |     Risk Analysis           |
+                      | Risk Reduction, Prototyping |
+                      +-----------------------------+
+                                |
+                                v
+                      +------------------------+
+                      |      Engineering       |
+                      |   Coding, Testing      |
+                      +------------------------+
+                                |
+                                v
+                      +------------------------+
+                      |       Evaluate         |
+                      | Customer Evolution     |
+                      +------------------------+
+                                |
+                                v
+                            [Release]
+                                |
+                                v
+                        (Next Iteration...)
+
+		- Project activities are organized into spirals instead of sequence.
+		
+		- Each spiral represents a phase in the process.
+		
+		- No fixed phases such as specification or design.
+		
+		- Risks are assessed and resolved throughout the process.
+		
+		- Spiral model benefits:
+			+ Emphasis on risk management.
+			
+			+ Good for large project.
+			
+			+ Flexibility in requirements.
+			
+			+ User see the system early.
+			
+		- Spiral model problems:
+			+ Complex and expensive.
+			
+			+ Too much dependability on risk analysis.
+			
+			+ Difficult in time management.
+			
+	* Rational unified process:
+	
+				Phases →         | Inception | Elaboration | Construction | Transition |
+				------------------------------------------------------------------------
+				Business Model   |   ***     |   **        |    *         |            |
+				Requirements     |   ***     |   ***       |    **        |    *       |
+				Analysis & Design|   **      |   ***       |    ***       |    *       |
+				Implementation   |           |   *         |    ****      |   **       |
+				Testing          |           |   *         |    ***       |   ***      |
+				Deployment       |           |             |    *         |   ****     |
+				Config Mgmt      |   *       |   *         |    **        |   *        |
+				Project Mgmt     |   ***     |   ***       |    ***       |   **       |
+				Environment      |   *       |   *         |    **        |   *        |
+				------------------------------------------------------------------------
+				Iterations       |   Init    |  Elab#1,2   |  Const#1–N   | Tran#1,2   |
+
+		- Activities grouped into workflows.
+		
+		- Four phases: Inception, Elaboration, Construction, and Transition.
+		
+		- Each phase divied into one or more iterations.
+		
+		- RUP phases:
+			+ Inception: Establish the business case for the system.
+			
+			+ Elaboration: Develop an understanding of the problem domain and the system architecture.
+			
+			+ Construction: System design, programming and testing.
+			
+			+ Transition: Deploy the system in its operating environment.
+			
+		- RUP iteration:
+			+ Each phase is divided into one or more iterations.
+			
+			+ Each iteration is considered a waterfall cycle.
+			
+			+ Each iteration has entry and exit criteria or check points.
+			
+			+ Typical number of iterations per phase:
+				# Inception: 1-2 iterations.
+				
+				# Elaboration: 1-3 iterations.
+				
+				# Construction: 2-3 iterations.
+				
+				# Transition: 2-3 iterations.
+				
+	* CMMI:
+		- CMMI - Capability Maturity Model Integration.
+		
+		- Developed and promoted by CMU's Software Engineering Institute (SEI).
+		
+		- CMMI is a framework for software and systems process maturity.
+		
+		- Allowing to support current and future software development trends:
+			+ Everything connected.
+			
+			+ Rapid requirements change.
+			
+			+ Adaptive process models.
+			
+			+ Requirements, architecture, development are done concurrently.
+			
+			+ Collaborative.
+			
+			+----------------------+--------------------------+-------------------------------------------------------------+
+			| Maturity Level       | Name                     | Description                                                 |
+			+----------------------+--------------------------+-------------------------------------------------------------+
+			| Level 5              | Optimizing               | Stable and flexible. Organization is focused on continuous  |
+			|                      |                          | improvement and is built to pivot and respond to change.    |
+			|                      |                          | The organization's stability enables agility and innovation.|
+			+----------------------+--------------------------+-------------------------------------------------------------+
+			| Level 4              | Quantitatively Managed   | Measured and controlled. Organization is data-driven with   |
+			|                      |                          | quantitative performance improvement objectives that are     |
+			|                      |                          | predictable and align to stakeholder needs.                 |
+			+----------------------+--------------------------+-------------------------------------------------------------+
+			| Level 3              | Defined                  | Proactive, rather than reactive. Organization-wide standards |
+			|                      |                          | provide guidance across projects, programs and portfolios.  |
+			+----------------------+--------------------------+-------------------------------------------------------------+
+			| Level 2              | Managed                  | Managed on the project level. Projects are planned,         |
+			|                      |                          | performed, measured, and controlled.                        |
+			+----------------------+--------------------------+-------------------------------------------------------------+
+			| Level 1              | Initial                  | Unpredictable and reactive. Work gets completed but is      |
+			|                      |                          | often delayed and over budget.                              |
+			+----------------------+--------------------------+-------------------------------------------------------------+
+	
+	---------------------------------------------------------------------------------------------------------------
+	
+	AGILE METHODS
+	* The agile manifesto
+		- Outlines the values and principles of the Agile software development methodology.
+		
+		- The agile manifesto is comprised of:
+			+ 4 Foundatioal values.
+			
+			+ 12 supporting principles.
+			
+	* 4 agile values:
+		- Individuals and interactions over processes and tools.
+		
+		- Working software over comprehensive documentation.
+		
+		- Customer collaboration over contract negotiation.
+		
+		- Responding to change over over following a plan.
+		
+	* 12 agile principles:
+		- Satisfy the customer through early and continuous delivery of valuable software.
+		
+		- Welcome changing requirements, even late in development.
+		
+		- Deliver working software frequently.
+		
+		- Business people and developers must work together.
+		
+		- Build projects around motivated individuals. Give them the support they need. Trust them.
+		
+		- The most efficient and effective method of conveying information is face-to-face conversation.
+		
+		- Working software is the primary measure of progress.
+		
+		- The sponsors, developers, and users should be able to maintain a constant pace indefinitely.
+		
+		- Continuous attention to technical excellence and good design.
+		
+		- Simplicity - The art of maximizing the amount of work not done - is essential.
+		
+		- The best architectures, requirements, and designs emerge from self-organizing teams.
+		
+		- The team reflects on how to become more effective and adjusts its behavior accordingly.
+		
+	* Extreme programming:
+			Philosophy: Take known good practices and push them to extremes.
+		- "If code reviews are good, we'll review code all the time."
+			
+		- "If testing is good, we'll test all the time."
+			
+		- "If design is good, we'll make it part of everybody's daily business."
+			
+		- "If simplicity is good, we'll always leave the system with the simplest design that supports its
+		current functionality."
+			
+		- "If architecture is important, everybody will work defining and refining the architecture all the time."
+			
+		- "If integration testing is important, then we'll integrate and test several times a day."
+			
+		- "If short iterations are good, we'll make the iterations really, really short - seconds and minutes and
+		hours, not weeks and months and years."
+			
+		- "If customer involvement is good, we'll make them full-time participants."
+			
+			
+		- The 12 practices:
+			+ The planning game.
+			
+			+ Small releases.
+			
+			+ Metaphor.
+			
+			+ Simple design.
+			
+			+ Testing.
+			
+			+ Refactoring.
+			
+			+ Pair programming.
+			
+			+ Collective ownership.
+			
+			+ Continuous integration.
+			
+			+ 40-hour week.
+			
+			+ On-site customer.
+			
+			+ Coding standards.
+		
+	* Scrum:
+		- What is Scrum?
+			+ An agile method that employs a set of simple practices and rules to incrementally develop products.
+			
+			+ Developed by Ken Schwaber and Jeff Sutherland.
+			
+		- Scrum concepts:
+			+ Daily scrum: A short daily meeting (less than 30 minutes) for the team to monitor status and communicate
+			problems.
+			
+			+ Sprint: A development cycle (typically 30 days).
+			
+			+ Backlog:
+				# Product backlog: Prioritized list of product requirements.
+				
+				# Sprint backlog: Prioritized list of requirements allocated to the sprint.
+				
+				# Impediments backlog: List of issues.
+				
+			+ Burndown chart: Chart showing the progress (backlog items completed).
+			
+		- Scrum process:
+			+ The Product Owner represents customers and stakeholders, manages the Product Backlog, prioritizes 
+			Product Backlog Items (PBIs), and ensures the right product is built.
+			
+			+ The Product Backlog is a prioritized and evolving list of features, bugs, and tasks, each called a PBI.
+			
+			+ Sprint Planning is a meeting at the start of a Sprint where the team forecasts which PBIs they can 
+			complete and breaks them into tasks to form the Sprint Backlog.
+			
+			+ The Sprint Backlog is the set of selected PBIs and their tasks for the current Sprint.
+			
+			+ The Development Team is a cross-functional, self-organizing group responsible for delivering working 
+			product increments.
+			
+			+ A Sprint is a time-boxed iteration (usually 1-4 weeks) where the team works to deliver a potentially 
+			releasable increment.
+			
+			+ The Scrum Master facilitates Scrum, removes impediments, and ensures the team follows Scrum principles.
+			
+			+ The Daily Scrum is a 15-minute daily meeting where the team shares progress, plans, and blockers.
+			
+			+ A Potentially Releasable Increment is the working product produced at the end of each Sprint, meeting 
+			the Definition of Done.
+			
+			+ The Sprint Review is a meeting where the team presents what was completed during the Sprint to stakeholders 
+			and gathers feedback.
+			
+			+ The Sprint Retrospective is a team-only meeting to reflect on the Sprint and identify ways to improve 
+			processes.
+			
+			+ Product Backlog Refinement (or Grooming) is a continuous activity where PBIs are clarified, split, and 
+			estimated to prepare for upcoming Sprints.
+			
+		- Artifacts:
+			+ Product backlog:
+				# Overall product requirements.
+				
+				# Items are estimated and prioritized.
+				
+			+ Sprint backlog:
+				# Requirement items allocated for one sprint.
+				
+				# Items are estimated prioritized.
+				
+			+ Burndown chart.
+			
+			+ Impediments backlog.
+			
+		- Roles:
+			+ Scrum master:
+				# Facilitate scrum practices.
+				
+				# Enforce scrum principles.
+				
+			+ Product owner:
+				# Create vision and requirements.
+				
+				# Contact point.
+				
+				# Create releases plan.
+				
+			+ Team:
+				# Estimate product backlog.
+				
+				# Create sprint backlog.
+				
+				# Implement backlog items.
+				
+			+ Manager:
+				# Ensure resources available.
+				
+				# Resources management.
+				
+				# Team building.
+				
+		- Activities:
+			+ Release panning: Prioritize and allocate features to releases.
+			
+			+ Sprint planning: Set goal and allocate backlog items to Sprint.
+			
+			+ Daily scrum: Review daily status.
+			
+			+ Sprint review:
+				# Held at end of sprint.
+				
+				# Review features completed.
+				
+				# Decide what went wrong, right.
+				
+	* Kanban:
+		- Introduced by Taiichi Ohno at Toyota for material production.
+		
+		- Helped Toyota to increase productivity of production by avoiding bottlenecks.
+		
+		- Cards or 'Kanban' are used to pass work items between teams.
+		
+		- David J. Anderson applied Kanban to software development in around 2004.
+		
+		- Kanban has a set of principles and practices for improving software development.
+		
+		- Kanban has been applied to other industries as well.
+		
+		- Kanban is an agile method.
+		
+		- Kanban concepts:
+			+ Kanban board - a board used to visualize work items.
+			
+			+ Kanban card - a card represents one work item.
+			
+			+ Cards are moved from left to right.
+			
+			+ Cards flow from one stage to another in the system.
+			
+			+ Flow should be even.
+			
+		- Four principles:
+			+ Start with what you are doing now: Does not make changes to existing processes immediately.
+			
+			+ Agree to pursue incremental, evolutionary change: Small changes at a time.
+			
+			+ Respect current roles, responsibilities and job-titles: Does not require changes to organizations
+			immediately.
+			
+			+ Encourage acts of leadership at all levels: From developers to senior managers.
+			
+		- Core practices:
+			+ Visualize the flow of work:
+				# Kanban board.
+				
+				# Use cards or stickers.
+				
+				# Use colors.
+				
+			+ Limit work in progress (WIP):
+				# Number of current items is limited.
+				
+				# Current work must be completed before having a new one.
+				
+				# Team members are encouraged to complete current work.
+				
+				# Number of current work items vary by teams.
+				
+			+ Use reports and charts to visualize progress: Cumulative flow diagram.
+			
+		- Benefits of Kanban:
+			+ Simple and flexible planning:
+				# When an item is completed, a new item is added.
+				
+				# No iteration like Scrum.
+				
+			+ Shortened cycle time (cycle time - amount of work travels through from starting to end).
+			
+			+ Few bottlenecks:
+				# Limit work in progress.
+				
+				# Reduce multi-tasking.
